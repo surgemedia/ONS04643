@@ -38,12 +38,10 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 ======================================*/
 $custom_includes = [
   'lib/aq_resizer.php',    // Scripts and stylesheets
+  'lib/custom_post_type_class.php',    // Create Custom Post Types
   'lib/nav-walker.php',    // Scripts and stylesheets
   'lib/acf-option-page.php', //ACF Option Page
-  'lib/tax_industries.php', //Taxonomy
-  'lib/tax_equipment.php', //Taxonomy
-
-
+  'lib/post-types.php', //Post Type
   'lib/gravity_forms-v5.php',
   'lib/function-debug.php',    // Scripts and stylesheets
   'lib/function-display-gravity-form.php',    // Scripts and stylesheets
