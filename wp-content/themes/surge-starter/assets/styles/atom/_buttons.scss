@@ -1,0 +1,8 @@
+.button{
+	background-color: $orange;
+	padding: 1em 2em;
+	max-width: 10em;
+	&:hover{
+		text-decoration:none;
+	}
+}
