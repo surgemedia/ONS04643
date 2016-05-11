@@ -1,0 +1,12 @@
+.button{
+	background-color: $orange;
+	padding: 1em 2em;
+	min-width: 10em;
+	color:#fff;
+	border: 2px solid #fff;
+	&:hover{
+		color:#fff;
+		text-decoration:none;
+	}
+}
+

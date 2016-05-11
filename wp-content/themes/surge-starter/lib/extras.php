@@ -37,7 +37,6 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 =            EXTRA FUCTIONS            =
 ======================================*/
 $custom_includes = [
-  'lib/aq_resizer.php',    // Scripts and stylesheets
   'lib/nav-walker.php',    // Scripts and stylesheets
   'lib/acf-option-page.php', //ACF Option Page
 
@@ -47,8 +46,10 @@ $custom_includes = [
   'lib/function-get_component.php',    // Scripts and stylesheets
   'lib/function-get_id_from_slug.php',    // Scripts and stylesheets
   'lib/function-get-featured-image-url.php',    // Scripts and stylesheets
-  'lib/function-truncate-content.php'    // Scripts and stylesheets
+  'lib/function-truncate-content.php',    // Scripts and stylesheets
+  'lib/function-image_resize.php',    // Scripts and stylesheets
 
+  'lib/aq_resizer.php',    // Scripts and stylesheets
 
 ];
 
