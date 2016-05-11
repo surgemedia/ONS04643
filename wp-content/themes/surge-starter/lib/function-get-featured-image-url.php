@@ -14,3 +14,11 @@ $thumb_url_array = wp_get_attachment_image_src($thumb_id, $size, true);
 $thumb_url = $thumb_url_array[0];
 return $thumb_url;
 }
+
+function is_default($url){
+	if (strpos($url, 'wp-include') !== false) {
+    return true;
+	} else{
+		return false;
+	}
+}
