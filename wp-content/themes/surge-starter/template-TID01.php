@@ -45,11 +45,11 @@
 				+ molecule/card
 			=============================================*/
 			get_component([ 'template' => 'molecule/card',
-											// 'remove_tags' =>  ['i'],
 											'vars' => [
-														"class" => 'col-md-6',
+														"class" => 'col-md-6 card',
 														"image" => 'http://localhost/ONS04643/wp-content/uploads/2016/05/any4-1.jpg',
 														"title" => "One stop power shop",
+														"subtitle" => "One stop power shop",
 														"content" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe sed odit inventore a quo mollitia adipisci est placeat omnis earum quisquam minus sit iusto, accusamus et facere. Eligendi distinctio neque delectus natus, doloribus animi velit pariatur, minus vero. Dolores quis asperiores sequi maiores, doloribus, cum quia reprehenderit accusantium accusamus at.",
 														]
 											 ]);
