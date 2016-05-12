@@ -1,4 +1,60 @@
 body{
 	color: $text;
+	font-size:10px;
+	font-family:$font-family;
 }
 
+.white-bg {
+	background-color:$white;
+} 
+.grey-light-bg {
+	background-color:$grey-light;
+} 
+.black-bg {
+	background-color:$black;
+}
+.orange-bg {
+	background-color:$orange;
+}
+
+.black-trans-bg {
+	background-color:rgba($black,0.8);
+}
+.white-trans-bg {
+	background-color:rgba($white,0.8);
+}
+
+.border-bottom {
+	border-bottom:6px solid $orange;
+}
+.border-top {
+	border-top:6px solid $orange;
+}
+
+h1,.h1 { font-family:$font-family; font-size:4.2em; text-transform: uppercase; font-weight:800; }
+h2,.h2 {font-family:$font-family; font-size:4.2em; font-weight:300;}
+h3,.h3 {font-family:$font-family; font-size:3.2em; }
+h4,.h4 {font-family:$font-family; font-size:2.2em; }
+h5,.h5 { @extend .h4; }
+h6,.h6 { @extend .h4; }
+
+p,.p1 {
+	font-family:$font-family;
+	font-weight:100;
+	font-size:1.4em;
+}
+.p2 {
+	font-family:$font-family;
+	font-size:2.4em;
+}
+.p3 {
+	font-family:$font-family;
+	font-size:2.4em;
+}
+a,.a {
+	color:$orange;
+}
+.menu-a {
+	font-weight:bold;
+	font-size:1.4em;
+}
