@@ -6,17 +6,19 @@
 
 <?php while (have_posts()) : the_post(); ?>
 
+<img class="top-banner" src="http://localhost/ONS04643/wp-content/uploads/2016/05/any1-1.jpg" alt="">
+
+
 <?php
 			/*=============================================
-			=            	Card (Class,Image,Title,Content)
+			=    Card Header (Class,Subtitle,Title,Content)
 			= @components
 				+ molecule/card-header
 			=============================================*/
-			get_component([ 'template' => 'molecule/card-header',
-											// 'remove_tags' =>  ['i'],
+			get_component([ 'template' => 'molecule/card',
+											'remove_tags' =>  ['img'],
 											'vars' => [
-														"class" => 'col-md-12',
-														"image" => 'http://localhost/ONS04643/wp-content/uploads/2016/05/any1-1.jpg',
+														"class" => 'card container padding-4',
 														"subtitle" => "Onsite for the mining industry",
 														"title" => "One stop power shop",
 														"content" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe sed odit inventore a quo mollitia adipisci est placeat omnis earum quisquam minus sit iusto, accusamus et facere. Eligendi distinctio neque delectus natus, doloribus animi velit pariatur, minus vero. Dolores quis asperiores sequi maiores, doloribus, cum quia reprehenderit accusantium accusamus at.",
@@ -30,7 +32,7 @@
 			= @components
 				+ molecule/card
 			=============================================*/
-			get_component([ 'template' => 'molecule/card',
+		/*	get_component([ 'template' => 'molecule/card',
 											// 'remove_tags' =>  ['i'],
 											'vars' => [
 														"class" => 'col-md-6',
@@ -38,11 +40,11 @@
 														"title" => "One stop power shop",
 														"content" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe sed odit inventore a quo mollitia adipisci est placeat omnis earum quisquam minus sit iusto, accusamus et facere. Eligendi distinctio neque delectus natus, doloribus animi velit pariatur, minus vero. Dolores quis asperiores sequi maiores, doloribus, cum quia reprehenderit accusantium accusamus at.",
 														]
-											 ]);
+											 ]);*/
 	 ?>
 <?php
 
-
+/*
 			get_component([
 											'template' => 'atom/link',
 											// 'return_string' => true,
@@ -51,9 +53,26 @@
 														"text" => 'Read More',
 														"url" => "get_permalink()"
 														]
+										]);f*/
+		 ?>
+<?php
+			/*=============================================
+			= Category (Class,Subtile,Title,Category)
+			= @components
+				+ organism/paragraph-overlay
+				+ atom/gvform
+			=============================================*/
+
+			get_component([
+											'template' => 'organism/category',
+											'vars' => [
+														"class" => 'category container-fluid',
+														"subtitle" => "Mining Industry",
+														"title" => "onsite case studies",
+														'category' => 'mining'
+ 														]
 										]);
 		 ?>
-
 
 
 <?php
@@ -68,7 +87,7 @@
 											'template' => 'organism/paragraph-overlay',
 											'remove_tags' =>  ['img'],
 											'vars' => [
-														"class" => 'contact-us col-xs-12',
+														"class" => 'contact-us container-fluid',
 														"background" => get_field('background_form','option'),
 														"subtitle" => get_field('title_form','option'),
 														'title' => get_field('short_phone','option'),

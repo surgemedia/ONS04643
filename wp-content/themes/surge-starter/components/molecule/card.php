@@ -7,4 +7,3 @@
 	<?php echo apply_filters('the_content',  $vars["content"]); ?>
 	<?php echo $vars['button']; ?>
 </article>
-b

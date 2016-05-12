@@ -6,7 +6,7 @@
 	<div class="col-md-6 pull-right">
 		<div class="box">
 			<h3 class="text-uppercase"><?php echo $vars['subtitle'] ?></h3>
-			<img src="<?php echo $vars['logo'] ?>" alt=""></img>
+			<img class="img-responsive" src="<?php echo $vars['logo'] ?>" alt=""></img>
 			<h1 class="text-uppercase">Phone <?php echo $vars['title'] ?></h1>
 			<p><?php echo $vars['description'] ?></p>
 			<?php echo $vars["atom"]; ?>
