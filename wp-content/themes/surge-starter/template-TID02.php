@@ -58,19 +58,47 @@
 
 <?php
 			/*=============================================
-			=      	Contact-Us (Class,Image,Title,Content)
+			= Contact-Us (Class,Background,Subtitle,Title,Description)
+			= @components
+				+ organism/paragraph-overlay
+				+ atom/gvform
+			=============================================*/
+
+			get_component([
+											'template' => 'organism/paragraph-overlay',
+											'remove_tags' =>  ['img'],
+											'vars' => [
+														"class" => 'contact-us col-xs-12',
+														"background" => get_field('background_form','option'),
+														"subtitle" => get_field('title_form','option'),
+														'title' => get_field('short_phone','option'),
+														"description" => get_field('description_form','option'),
+														"atom" =>  get_component([
+																'template' => 'atom/gvform',
+																'return_string' => true,
+																'vars' => []
+															])
+ 														]
+										]);
+		 ?>
+
+<?php
+			/*=============================================
+			=      	Section Gear (Class,Title,Content)
 			= @components
 				+ organism/contac-us
 			=============================================*/
 
-			get_component([
-											'template' => 'organism/contact-us',
+			/*get_component([
+											'template' => 'organism/paragraph-overlay',
 											'vars' => [
-														"class" => 'col-xs-12',
-														"background" => get_field('background_form','option')
-														]
-										]);
+														"class" => ' col-xs-12',
+														"background" => get_field('background_form','option'),
+														"title" => "The Gear",
+														'content' => "get_field('short_phone','option')",
+														"description" => get_field('description_form','option')
+ 														]
+										]);*/
 		 ?>
-
 
 <?php endwhile; ?>
