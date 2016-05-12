@@ -53,8 +53,8 @@
 										//arrow
 										background-image:none !important;
 										&:before{
-										
-										 
+											content:"";
+											@include triangle(1em, $text, 'bottom-right');
 										}
 									}
 								}
