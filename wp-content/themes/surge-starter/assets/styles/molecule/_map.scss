@@ -1,5 +1,15 @@
- #map-canvas {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+.map{ 
+	p{
+		margin-bottom: 3em;
+	}
+	.button{
+		margin-bottom: 2em;
+		display: inline-block;
+	}
+	#map-canvas {
+	  height: 100%;
+	  margin: 0;
+	  padding: 0;
+	}
+
 }

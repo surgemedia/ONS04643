@@ -127,7 +127,7 @@
 			get_component([
 											'template' => 'organism/locator',
 											'vars' => [
-														"class" => 'locator container-fluid  text-center',
+														"class" => 'locator container-fluid grey-light-bg text-center',
  														"description" => 'Find our rental and service locations throughout Australia.'
  														]
 										]);
