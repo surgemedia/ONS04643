@@ -84,5 +84,12 @@
       $(this).parent().toggleClass('open');
   });
 
+/*=================================
+=            Animation            =
+=================================*/
+
+
+
+
 
 })(jQuery); // Fully reference jQuery after this point.
