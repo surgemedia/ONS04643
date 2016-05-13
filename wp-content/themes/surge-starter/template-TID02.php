@@ -119,16 +119,16 @@
 
 <?php
 			/*=============================================
-			= Category (Class,Subtile,Title,Category)
+			= Locator (Class, Description)
 			= @components
-				+ organism/paragraph-overlay
-				+ atom/gvform
+				+ organism/locator
 			=============================================*/
 
 			get_component([
 											'template' => 'organism/locator',
 											'vars' => [
 														"class" => 'locator container-fluid  text-center',
+ 														"description" => 'Find our rental and service locations throughout Australia.'
  														]
 										]);
 		 ?>

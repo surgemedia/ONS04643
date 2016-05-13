@@ -15,6 +15,20 @@
 															 A: 5/28 Foveaux Street, Surry Hills NSW 2010 <br/>"
 															]
 												 ]);
-		 ?>
+	?>
 	
+	<?php
+				/*=============================================
+				=    Map (Class,Description)
+				= @components
+					+ molecule/map
+				=============================================*/
+				get_component([ 'template' => 'molecule/map',
+												'vars' => [
+															"class" => 'map text-center',
+															"description" => "Find our rental and service locations throughout Australia.",
+															]
+												 ]);
+	?>
+
 </section>
