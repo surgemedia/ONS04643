@@ -14,3 +14,13 @@
 		text-decoration:none;
 	}
 }
+
+.button-gear{
+	@extend .button;
+	background-color:#fff;
+	border: 2px $text solid;
+	color:$text;
+	&:hover{
+		color:$text;
+	}
+}

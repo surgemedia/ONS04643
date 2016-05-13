@@ -3,7 +3,7 @@
 	<hgroup>
 		<h6><?php echo $vars["subtitle"]?></h6>
 		<h1><?php echo $vars["title"]?></h1>
-	</hroup>
+	</hgroup>
 	<?php echo apply_filters('the_content',  $vars["content"]); ?>
 	<?php echo $vars['button']; ?>
 </article>
