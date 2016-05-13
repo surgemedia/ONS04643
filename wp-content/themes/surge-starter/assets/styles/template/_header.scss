@@ -1,0 +1,20 @@
+.banner {
+	background:$blue;
+	width:100%;
+	z-index: 999;
+
+		.navbar-nav {
+		    display: inline-block;
+		    float: none;
+		    max-width: 70%;
+		}
+		.navbar-collapse {
+	    text-align: center;
+		}
+		.menu-item {
+			a {
+				@extend .menu-a;
+			}
+		}
+
+}
