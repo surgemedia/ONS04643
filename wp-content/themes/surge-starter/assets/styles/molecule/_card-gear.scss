@@ -1,0 +1,17 @@
+.card-gear{
+	position:relative;
+	text-align: center;
+	.background{
+		height:30em;
+		background-size: cover;
+		background-position: center;
+		padding-top: 25em;
+		.button{
+			width: 86%;
+	    display: inline-block;
+	    position: absolute;
+	    bottom: 15px;
+	    left: 7%;
+		}
+	}
+}
