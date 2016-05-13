@@ -140,20 +140,23 @@
 	<div id="video" class="col-md-6 " style="background-image:url(https://unsplash.it/685/340?image=838)">
 	</div>
 </section>
-<section>
-	<?php 
-		get_component([ 
-					'template' => 'molecule/card',
-						'remove_tags' =>  ['img','h6'],
-						'vars' => [
-									'id' => 'gear',
-									'class' => 'container-fluid text-center',
-									'title' => 'The Gear',
-									'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-								  ]
-					]);
-	?>
-</section>
+<?php
+			/*=============================================
+			= Category (Class,Subtile,Title,Category)
+			= @components
+				+ organism/gear
+			=============================================*/
+
+			get_component([
+											'template' => 'organism/gears',
+											'vars' => [
+														"class" => 'gears container-fluid  text-center border-bottom',
+														"title" => "The Gear",
+														'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consectetur itaque repellat explicabo doloribus officiis atque, porro quae eos consequatur.'
+ 														]
+										]);
+		 ?>
+
 
 
 <?php

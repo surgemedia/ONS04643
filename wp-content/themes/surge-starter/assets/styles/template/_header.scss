@@ -12,6 +12,17 @@
 	    text-align: center;
 		}
 		.menu-item {
+			position:relative;
+			&:after {
+				content: "";
+			    width: 2px;
+			    height: 45%;
+			    position: absolute;
+			    top: 1.25em;
+			    right: 0px;
+			    background: #fff;
+			}
+			
 			a {
 				@extend .menu-a;
 			}
