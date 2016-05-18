@@ -51,7 +51,7 @@
 			
 
 			/*=============================================
-			=            	Card (Class,Image,Title,Content)
+			= Card (Class,Image,Title,Content)
 			= @components
 				+ molecule/card
 			=============================================*/
@@ -83,6 +83,11 @@
 	</div>
 </section>
 <?php 
+		/*=============================================
+			= Card (Class,Image,Title,Content)
+			= @components
+				+ molecule/card
+			=============================================*/
 		get_component([
 											'template' => 'organism/paragraph-overlay',
 											'remove_tags' =>  ['h1'],
@@ -160,6 +165,21 @@ Destination Zero is our in-house Health and Safety program.',
 										]);
 		 ?>
 
+<?php
+			/*=============================================
+			= Locator (Class, Description)
+			= @components
+				+ organism/locator
+			=============================================*/
+
+			get_component([
+											'template' => 'organism/locator',
+											'vars' => [
+														"class" => 'locator container-fluid grey-light-bg text-center',
+ 														"description" => 'Find our rental and service locations throughout Australia.'
+ 														]
+										]);
+		 ?>
 
 
 <?php endwhile; ?>

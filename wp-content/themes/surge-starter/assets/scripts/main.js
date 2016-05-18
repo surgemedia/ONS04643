@@ -84,18 +84,7 @@
       $(this).parent().toggleClass('open');
   });
 
-/*=================================
-=            Animation            =
-=================================*/
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-
-
 
 
 })(jQuery); // Fully reference jQuery after this point.
+

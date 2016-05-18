@@ -35,7 +35,7 @@
 			get_component([
 											'template' => 'organism/category',
 											'vars' => [
-														"class" => 'category container-fluid border-bottom',
+														"class" => 'category container-fluid border-bottom grey-light-bg',
 														"subtitle" => "Mining Industry",
 														"title" => "onsite case studies",
 														'category' => 'mining'

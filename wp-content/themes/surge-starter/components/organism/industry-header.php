@@ -1,5 +1,5 @@
 <section class="<?php echo $vars['class'] ?>">
-	<img class="top-banner" src="http://localhost/ONS04643/wp-content/uploads/2016/05/any1-1.jpg" alt="">
+	<img class="top-banner" src="http://onsite.surgehost.com.au/i.php?image=https://unsplash.it/1920/1080&w=1920&h=1080&c=true&q=50" alt="">
 
 	<?php
 			/*=============================================

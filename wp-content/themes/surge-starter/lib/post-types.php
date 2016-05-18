@@ -36,7 +36,7 @@
 	//add tax to post type
 	$case_study->register_taxonomy('industry');
 	/*==============================================
- 	=            Case Study - Post Type            =
+ 	=            Location  - Post Type            =
  	==============================================*/
 	$location = new CPT([
     'post_type_name' => 'location',
@@ -45,6 +45,16 @@
 
 	$location->menu_icon("dashicons-location-alt");
 	$location->register_taxonomy('state');
+	/*==============================================
+ 	=            People - Post Type            =
+ 	==============================================*/
+	$people = new CPT([
+    'post_type_name' => 'staff',
+    'plural' => 'Staff',
+	]);
+
+	$people->menu_icon("dashicons-businessman");
+	$people->register_taxonomy('job');
 
 
 
