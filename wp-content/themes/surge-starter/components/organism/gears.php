@@ -25,7 +25,7 @@
 				get_component([ 'template' => 'molecule/card-gear',
 								'vars' => [
 											"class" => 'col-md-3 card-gear',
-											"image" => get_field('default_image','option'),
+											"image" => 'https://unsplash.it/1920/1080?image=960',
 											"category_name" => "Portables",
 											"url" => ""
 											]

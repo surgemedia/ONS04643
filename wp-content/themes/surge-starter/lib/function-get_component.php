@@ -1,4 +1,12 @@
-<?php 
+<?php
+/**
+ * Get Component for wordpress
+ * @link 
+ *
+ * @author  Alex King
+ * @version 0.2
+ * @license http://www.opensource.org/licenses/mit-license.html MIT License
+ */
 /*=====================================
 =            Add Component            =
 =====================================*/

@@ -35,4 +35,27 @@
 	$case_study->menu_icon("dashicons-analytics");
 	//add tax to post type
 	$case_study->register_taxonomy('industry');
+	/*==============================================
+ 	=            Case Study - Post Type            =
+ 	==============================================*/
+	$location = new CPT([
+    'post_type_name' => 'location',
+    'supports' => array('title')
+	]);
+
+	$location->menu_icon("dashicons-location-alt");
+	$location->register_taxonomy('state');
+
+
+
+
+
+	/*=======================================================
+	=            Remove Supports from Post Types            =
+	=======================================================*/
+	function remove_supports(){
+		remove_post_type_support( 'location', 'editor' );	
+	}
+	add_action( 'init', 'remove_supports' );
+
 ?>

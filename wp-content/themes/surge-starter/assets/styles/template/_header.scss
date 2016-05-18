@@ -27,5 +27,14 @@
 				@extend .menu-a;
 			}
 		}
+	.navbar-brand {
+		float: left;
+	    font-size: 18px;
+	    height: 55px;
+	    position: absolute;
+	    overflow: hidden;
+	    left: 0px;
+	    padding:0px;
+	}
 
 }

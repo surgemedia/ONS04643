@@ -91,8 +91,11 @@
 														"logo" => 'https://unsplash.it/200/100?image=960',
 
 														"class" => 'contact-us container-fluid padding-4',
-														"subtitle" => get_field('title_form','option'),
-														"description" => get_field('description_form','option'),
+														"subtitle" => 'Safety',
+														"description" => 'Everything we do begins and ends with safety. For us, it’s not just about mitigating risk or
+reducing liability. Onsite culture demands that our team, our customers and our suppliers
+have the right to go home to their families in exactly the same shape they came to work
+Destination Zero is our in-house Health and Safety program.',
 														"atom" => get_component([
 																'template' => 'atom/link',
 																'return_string' => true,
@@ -110,7 +113,7 @@
 			
 
 			/*=============================================
-			=            	Card (Class,Image,Title,Content)
+			=     Card (Class,Image,Title,Content)
 			= @components
 				+ molecule/card
 			=============================================*/
@@ -157,36 +160,6 @@
 										]);
 		 ?>
 
-
-
-<?php
-			/*=============================================
-			=      	Contact-Us (Class,Image,Title,Content)
-			= @components
-				+ organism/contac-us
-			=============================================*/
-		get_component([
-											'template' => 'organism/paragraph-overlay',
-											'remove_tags' =>  ['h1'],
-											'vars' => [
-														"background" => 'https://unsplash.it/1920/1080?image=960',
-														"logo" => 'https://unsplash.it/200/100?image=960',
-
-														"class" => 'contact-us container-fluid padding-4',
-														"subtitle" => get_field('title_form','option'),
-														"description" => get_field('description_form','option'),
-														"atom" => get_component([
-																'template' => 'atom/link',
-																'return_string' => true,
-																'vars' => [
-																			"class" => 'btn text-uppercase pull-left',
-																			"text" => 'Find out More',
-																			"url" => "get_permalink()"
-																			]
-																])
- 														]
-										]);
-	?>
 
 
 <?php endwhile; ?>
