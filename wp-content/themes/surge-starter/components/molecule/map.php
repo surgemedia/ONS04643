@@ -1,7 +1,7 @@
 <article class="<?php echo $vars['class'] ?>">
-<div id="map-buttons "class="row">
-	<p><?php echo $vars['description']; ?></p>
-<div class="container">
+<div id="map-buttons "class="">
+
+<div class="container-fluid">
 	<?php
 			get_component([
 								'template' => 'atom/link',

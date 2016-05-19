@@ -9,7 +9,7 @@
 				get_component([ 'template' => 'molecule/card',
 								'remove_tags' =>  ['img'],
 								'vars' => [
-											"class" => 'container-fluid card text-center padding-2',
+											"class" => 'container-fluid card text-center padding-2 title',
 											"title" => $vars['title'],
 											"subtitle" => $vars['subtitle']
 											]

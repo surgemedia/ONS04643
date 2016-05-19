@@ -12,11 +12,10 @@
 															"subtitle" => "Branch Locator",
 															"title" => "Find Us",
 															"content" => "P: 13 40 40     E: website@onsite.com.au     F: 13 40 40  <br/>
-															 A: 5/28 Foveaux Street, Surry Hills NSW 2010 <br/>"
+															 A: 5/28 Foveaux Street, Surry Hills NSW 2010 <br/> <br/> Find our rental and service locations throughout Australia."
 															]
 												 ]);
 	?>
-	
 	<?php
 				/*=============================================
 				=    Map (Class,Description)
