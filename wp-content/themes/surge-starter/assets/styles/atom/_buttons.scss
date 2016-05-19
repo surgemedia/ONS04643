@@ -1,17 +1,31 @@
 .btn,
 .button{
-	background-color: $orange;
+	background-color: $color2;
 	padding: 0.5em 2em;
 	min-width: 10em;
 	color:#fff;
 	border: 2px solid #fff;
 	border-radius:0px;
-	font-size:1.5em;
+	font-size:2.1em;
 	text-transform: uppercase;
 	font-weight: bold;
 	&:hover{
-		color:#fff;
+		color:$color3;
+		background:$white;
 		text-decoration:none;
+		border: 2px solid $color3;
+
+	}
+}
+.button.text {
+	background:transparent;
+	color:$orange;
+	border:2px solid transparent;
+	&:hover {
+		color:$color3;
+		background:$white;
+		text-decoration:none;
+		border: 2px solid $color3;
 	}
 }
 
