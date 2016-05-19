@@ -81,7 +81,7 @@
 			get_component([
 											'template' => 'organism/gears',
 											'vars' => [
-														"class" => 'gears container-fluid  text-center border-bottom',
+														"class" => 'gears container-fluid  text-center border-bottom padding-6',
 														"title" => "The Gear",
 														'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consectetur itaque repellat explicabo doloribus officiis atque, porro quae eos consequatur.'
  														]
@@ -99,7 +99,7 @@
 			get_component([
 											'template' => 'organism/locator',
 											'vars' => [
-														"class" => 'locator container-fluid grey-light-bg text-center',
+														"class" => 'locator grey-light-bg text-center',
  														"description" => 'Find our rental and service locations throughout Australia.'
  														]
 										]);
