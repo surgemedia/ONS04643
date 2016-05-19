@@ -1,0 +1,38 @@
+.people-category {
+	.button {
+		position: relative;
+		transition: 0.3s opacity ease;
+		&:after {
+			position:absolute;
+			content:"";
+			top: 17px;
+    		left: 25%; 
+			@include triangle(80px, $grey, top);
+			opacity: 1;
+			transition: 0.3s opacity ease;
+
+		}
+		&.collapsed:after {
+			content:"";
+			border:0px; 
+			opacity: 0;
+			transition: 0.3s opacity ease;	
+		}
+	}
+		
+}
+
+
+.reveal-panel {
+	position: relative;
+	.icon-close {
+		color: $white;
+	    font-size: 3em;
+	    padding: 0.5em;
+	    position: absolute;
+	    right: 15px;
+	    line-height: 1em;
+	    top: 15px;
+	    border: 2px solid;
+	}
+}

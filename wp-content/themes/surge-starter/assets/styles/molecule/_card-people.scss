@@ -1,0 +1,11 @@
+.card.people {
+	h1 {
+		@extend .h4;
+		text-transform: capitalize;
+	}
+	p {
+		margin-top: 0px;
+		margin-bottom: 2em;
+
+	}
+}

@@ -8,7 +8,7 @@
 
 
 <section class="border-bottom">
-	<img class="top-banner" src="http://onsite.surgehost.com.au/i.php?image=https://unsplash.it/1920/1080?random&w=1920&h=1080&c=true&q=5" alt="">
+	<img class="top-banner" src="http://onsite.surgehost.com.au/i.php?image=https://unsplash.it/1920/1080?random&w=1920&h=1080&c=true&q=90" alt="">
 
 	<?php
 			/*=============================================
@@ -28,8 +28,8 @@
 	 ?>
 
 </section>
-<section id="leadership" class=" padding-2 grey-light-bg border-bottom">
-<div class="container">
+<section id="leadership" class=" padding-6 grey-light-bg border-bottom">
+<div class="container-fluid">
 		<?php
 			/*=============================================
 			=    Card Header (Class,Subtitle,Title,Content)
@@ -39,7 +39,7 @@
 			get_component([ 'template' => 'molecule/card',
 								'remove_tags' =>  ['img','h6'],
 								'vars' => [
-											"class" => 'container-fluid card text-center padding-2',
+											"class" => 'container-fluid card text-center padding-2 ',
 											"title" => 'LEADERSHIP TEAM',
 											"content" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe sed odit inventore a quo mollitia adipisci "
 											]
@@ -54,9 +54,9 @@
 			get_component([ 'template' => 'molecule/card',
 								'remove_tags' =>  ['h6'],
 								'vars' => [
-											"class" => 'col-md-3 card text-center',
-											"title" => 'LEADERSHIP TEAM',
-											"image" => "http://onsite.surgehost.com.au/i.php?image=https://unsplash.it/1920/1080&w=1920&h=1080&c=true&q=5",
+											"class" => 'col-md-3 card text-center people',
+											"title" => 'Name Last',
+											"image" => "http://onsite.surgehost.com.au/i.php?image=https://unsplash.it/500/500?image=1062&w=500&h=500&c=true&q=50",
 											"content" => "POSITION",
 											"button" =>  get_component([
 																'template' => 'atom/link',
@@ -72,8 +72,8 @@
 	 } ?>
 	 </div>
 </section>
-<section id="leadership" class=" padding-2 grey-light-bg border-bottom">
-<div class="container">
+<section id="" class=" padding-6 grey-light-bg">
+<div class="container-fluid">
 		<?php
 			/*=============================================
 			=    Card Header (Class,Subtitle,Title,Content)
@@ -83,7 +83,7 @@
 			get_component([ 'template' => 'molecule/card',
 								'remove_tags' =>  ['img','h6'],
 								'vars' => [
-											"class" => 'container-fluid card text-center padding-2',
+											"class" => 'container-fluid card text-center padding-2 title',
 											"title" => 'Our people',
 											"content" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe sed odit inventore a quo mollitia adipisci "
 											]
@@ -91,24 +91,25 @@
 	 ?>
 	 <?php for ($i=0; $i < 2; $i++) { 
 	 		/*=============================================
-			=    Card Header (Class,Subtitle,Title,Content)
+			=    Card people (Class,Subtitle,Title,Content)
 			= @components
 				+ molecule/card-header
 			=============================================*/
 			get_component([ 'template' => 'molecule/card',
 								'remove_tags' =>  ['h6'],
 								'vars' => [
-											"class" => 'col-md-6 card ',
+											"class" => 'col-md-6 card people-category para',
 											"title" => 'Onsite specialist',
-											"image" => "http://onsite.surgehost.com.au/i.php?image=https://unsplash.it/1920/1080&w=1920&h=1080&c=true&q=5",
-											"content" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+											"image" => "http://onsite.surgehost.com.au/i.php?image=https://unsplash.it/700/500?image=1031&w=700&h=700&c=true&q=100",
+											"content" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
 											"button" =>  get_component([
 																'template' => 'atom/link',
 																'return_string' => true,
 																'vars' => [
-																	"class" => 'button text text-uppercase',
+																	"class" => 'button text-uppercase collapsed',
 																	"text" => 'Read More',
-																	"url" => "javascript:void(0)"
+																	"url" => "#reveal".$i,
+																	"toggle" => 'role="button" data-toggle="collapse"'
 																	]
 															])
 											]
@@ -117,7 +118,9 @@
 
 	 </div>
 </section>
-<section id="reveal">
+<section id="reveal0" class="reveal-panel grey-bg collapse">
+	<span class="tri"></span>
+	<a class="icon-close" role="button" data-toggle="collapse" href="#reveal0" ></a>
 	<?php for ($i=0; $i < 2; $i++) { 
 			/*=============================================
 			=    Card Header (Class,Subtitle,Title,Content)
@@ -127,9 +130,40 @@
 			get_component([ 'template' => 'molecule/card',
 								'remove_tags' =>  ['img','h6'],
 								'vars' => [
-											"class" => 'container-fluid card text-center padding-2',
+											"class" => 'container card text-center padding-2 position',
 											"title" => 'Name/Postition',
-											"content" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe sed odit inventore a quo mollitia adipisci ",
+											"content" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+											"button" =>  get_component([
+																'template' => 'atom/email-phone',
+																'return_string' => true,
+																'vars' => [
+																	"title1" => 'Email',
+																	"content1" => 'email@email.com',
+																	"title2" => 'Phone',
+																	"content2" => '1221321',
+																	"href" => "javascript:void(0)"
+																	]
+															])
+											]
+								 ]);
+		}
+	 ?>
+</section>
+<section id="reveal1" class="reveal-panel grey-bg collapse">
+	<span class="tri"></span>
+	<a class="icon-close" role="button" data-toggle="collapse" href="#reveal1" ></a>
+	<?php for ($i=0; $i < 5; $i++) { 
+			/*=============================================
+			=    Card Header (Class,Subtitle,Title,Content)
+			= @components
+				+ molecule/card-header
+			=============================================*/
+			get_component([ 'template' => 'molecule/card',
+								'remove_tags' =>  ['img','h6'],
+								'vars' => [
+											"class" => 'container card text-center padding-2 position',
+											"title" => 'Name/Postition',
+											"content" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
 											"button" =>  get_component([
 																'template' => 'atom/email-phone',
 																'return_string' => true,
@@ -160,7 +194,7 @@
 											'template' => 'organism/paragraph-overlay',
 											'remove_tags' =>  ['img'],
 											'vars' => [
-														"class" => 'contact-us container-fluid border-bottom',
+														"class" => 'contact-us container-fluid border-bottom border-top',
 														"background" => "https://unsplash.it/1920/1080/?random",
 														// get_field('background_form','option')
 														"subtitle" => get_field('title_form','option'),
@@ -185,7 +219,7 @@
 			get_component([
 											'template' => 'organism/gears',
 											'vars' => [
-														"class" => 'gears container-fluid  text-center border-bottom',
+														"class" => 'gears container-fluid  text-center border-bottom padding-6',
 														"title" => "The Gear",
 														'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consectetur itaque repellat explicabo doloribus officiis atque, porro quae eos consequatur.'
  														]
@@ -203,7 +237,7 @@
 			get_component([
 											'template' => 'organism/locator',
 											'vars' => [
-														"class" => 'locator container-fluid grey-light-bg text-center',
+														"class" => 'locator grey-light-bg text-center',
  														"description" => 'Find our rental and service locations throughout Australia.'
 
  														]

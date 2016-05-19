@@ -1,0 +1,18 @@
+.card.people-category {
+	img {
+		width:95%;
+	}
+	hgroup {
+		h1 {
+			@extend .h3;
+			margin-top: 1em;
+			font-weight: 800;
+		}
+
+	}
+	p {
+		margin-top: 0px;
+		margin-bottom: 2em;
+
+	}
+}
