@@ -1,0 +1,148 @@
+{
+                            "key": "573e7e6a05812",
+                            "name": "Meta",
+                            "label": "Sections Options",
+                            "display": "row",
+                            "sub_fields": [
+                                {
+                                    "key": "field_573e7eb205826",
+                                    "label": "id",
+                                    "name": "id",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_573e7f6491be6",
+                                                "operator": "==",
+                                                "value": "id"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "#",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                },
+                                {
+                                    "key": "field_573e7e7d05823",
+                                    "label": "class",
+                                    "name": "class",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_573e7f6491be6",
+                                                "operator": "==",
+                                                "value": "class"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                },
+                                {
+                                    "key": "field_573e7e8205824",
+                                    "label": "background image",
+                                    "name": "background_image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_573e7f6491be6",
+                                                "operator": "==",
+                                                "value": "background_image"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "url",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_573e7ea305825",
+                                    "label": "background color",
+                                    "name": "background_color",
+                                    "type": "color_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_573e7f6491be6",
+                                                "operator": "==",
+                                                "value": "background_color"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": ""
+                                },
+                                {
+                                    "key": "field_573e7f6491be6",
+                                    "label": "Options",
+                                    "name": "options",
+                                    "type": "checkbox",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "id": "id",
+                                        "class": "class",
+                                        "background_image": "background_image",
+                                        "background_color": "background_color"
+                                    },
+                                    "default_value": [
+
+                                    ],
+                                    "layout": "horizontal",
+                                    "toggle": 0
+                                }
+                            ],
+                            "min": 0,
+                            "max": 1
+                        }
