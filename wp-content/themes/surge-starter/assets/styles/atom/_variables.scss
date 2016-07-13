@@ -5,11 +5,32 @@ $icon-font-path:        "../fonts/";
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
-// Colors
-$brand-primary:         #27ae60;
+/*==============================
+=            Colors            =
+==============================*/
+$color1: #1d3160;
+$color2: #f37223;
+$color3: #333f48;
+$color4: #e6e6e6;
+$color5: #c1c6c8;
 
-$orange: #F47224;
+$orange: $color2;
+$blue: $color1;
+$white: #fff;
+$black: #000;
 
-$grey: #E6E6E6;
+$grey-light: $color4;
+$grey:		$color5;
+$grey-dark: $color3;
 
-$text: #2E3F47;
+$text: $grey-dark;
+$brand-primary:$orange;
+
+/*============================
+=            Font            =
+============================*/
+$font-family:'Ubuntu', sans-serif;
+
+
+
+

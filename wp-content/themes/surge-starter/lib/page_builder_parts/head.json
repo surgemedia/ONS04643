@@ -1,0 +1,39 @@
+{
+    "key": "group_573e535ed20c4",
+    "title": "Page Builder",
+    "fields": [
+        {
+            "key": "field_573e5b5eaa5ea",
+            "label": "Layout",
+            "name": "layout",
+            "type": "repeater",
+            "instructions": "layout field",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_573e5b51aa5e8",
+            "min": 1,
+            "max": "",
+            "layout": "block",
+            "button_label": "Add Section",
+            "sub_fields": [
+                {
+                    "key": "field_573e5b51aa5e8",
+                    "label": "Section",
+                    "name": "section",
+                    "type": "flexible_content",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "button_label": "Add Options",
+                    "min": "",
+                    "max": "",

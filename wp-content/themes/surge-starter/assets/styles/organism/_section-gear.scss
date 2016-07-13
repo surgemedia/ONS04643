@@ -1,0 +1,21 @@
+.gears {
+        ul.dropdown-menu {
+            width: 100%;
+            text-align: center;
+            border: 0px;
+            border-radius: 0px;
+            background: $grey;
+            padding: 0px;
+             li {
+                /* padding: 1em; */
+                display: inline;
+                color: #fff;
+                width: 80%;
+                margin: 0 auto;
+             a {
+                padding: 1em;
+                color: #fff;
+            }
+        }
+    }
+}

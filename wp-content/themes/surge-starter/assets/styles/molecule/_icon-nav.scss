@@ -1,0 +1,82 @@
+#icon-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 5em;
+    left: -5em;
+    width: 12em;
+    overflow: hidden;
+    z-index: 99999;
+    display:none;
+	li {
+		display: inline-block;
+	    clear: both;
+	    overflow: hidden;
+	    float: left;
+	    margin-bottom: 2px;
+	    width:100%;
+		a {
+			line-height: 1em;
+    		display: block;
+			text-align: center;
+		    width: 100%;
+		    padding: 2em 0em;
+		    overflow: hidden;
+			background:$grey;
+			color:$grey-dark;
+	    	width:100%;
+	    	transition:0.2s all ease;
+
+			i {
+				font-size: 6em;
+			    display: inline;
+			    clear: both;
+			    line-height: 1em;
+			}
+			small {
+				    font-size: 1.15em;
+			    text-transform: uppercase;
+			    font-weight: bold;
+			    width: 100%;
+			    display: block
+			}
+			&:hover {
+				background:$orange;
+				color:$white;
+				transition:0.2s all ease;
+			}
+		}
+	}
+}
+
+ #icon-nav-cta {
+			line-height: 1em;
+    		display: block;
+			text-align: center;
+		    width: 12em;
+		    padding: 2em 0em;
+		    overflow: hidden; 
+			background:$grey;
+			color:$grey-dark;
+	    	transition:0.2s all ease;
+			display:none;
+			i {
+				font-size: 6em;
+			    display: inline;
+			    clear: both;
+			    line-height: 1em;
+			}
+			small {
+				    font-size: 1.15em;
+			    text-transform: uppercase;
+			    font-weight: bold;
+			    width: 100%;
+			    display: block
+			}
+			&:hover {
+				background:$orange;
+				color:$white;
+				transition:0.2s all ease;
+			}
+	}

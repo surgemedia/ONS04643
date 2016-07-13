@@ -9,8 +9,8 @@
 	$equipment->menu_icon("dashicons-hammer");
 	//Define post type
 	$equipment->register_taxonomy([
-	    'taxonomy_name' => 'equipment',
-	    'plural' => 'Equipment',
+	    'taxonomy_name' => 'gear',
+	    'plural' => 'Gear',
 	]);
 	/*============================================
 	=            Services - Post Type            =
@@ -18,7 +18,7 @@
 	$services = new CPT('service');
 	$services->menu_icon("dashicons-info");
 	//add tax to post type
-	$services->register_taxonomy('equipment');
+	$services->register_taxonomy('gear');
 	//Define post type
 	$services->register_taxonomy([
 	    'taxonomy_name' => 'industry',
@@ -35,4 +35,37 @@
 	$case_study->menu_icon("dashicons-analytics");
 	//add tax to post type
 	$case_study->register_taxonomy('industry');
+	/*==============================================
+ 	=            Location  - Post Type            =
+ 	==============================================*/
+	$location = new CPT([
+    'post_type_name' => 'location',
+    'supports' => array('title')
+	]);
+
+	$location->menu_icon("dashicons-location-alt");
+	$location->register_taxonomy('state');
+	/*==============================================
+ 	=            People - Post Type            =
+ 	==============================================*/
+	$people = new CPT([
+    'post_type_name' => 'staff',
+    'plural' => 'Staff',
+	]);
+
+	$people->menu_icon("dashicons-businessman");
+	$people->register_taxonomy('job');
+
+
+
+
+
+	/*=======================================================
+	=            Remove Supports from Post Types            =
+	=======================================================*/
+	function remove_supports(){
+		remove_post_type_support( 'location', 'editor' );	
+	}
+	add_action( 'init', 'remove_supports' );
+
 ?>

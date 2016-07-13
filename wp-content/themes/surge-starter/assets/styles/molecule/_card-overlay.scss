@@ -1,0 +1,27 @@
+.card.overlay {
+	background-size:cover;
+	h1 {
+		font-size:3em;
+		text-transform: uppercase;
+		margin: 0;
+		padding: 0;
+	}
+	small {
+		font-size:1.5em;
+		color:$orange;
+	}
+	.overlay {
+		padding:1.5em;
+		margin-top:20em;
+		background:rgba($black,0.8); 
+		position:relative;
+		&:after {
+			content: "";
+	    	position: absolute;
+		    bottom: 15px;
+		    right: 30px;
+	    	@include triangle( 20px, $orange, 'bottom-right');
+		}
+	}
+	padding-top:1em;
+}

@@ -1,0 +1,7 @@
+.card.title {
+	hgroup {
+		& + p {
+			margin-top: 1.5em;
+		}
+	}
+}

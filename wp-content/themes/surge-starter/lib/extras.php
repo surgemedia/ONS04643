@@ -50,8 +50,11 @@ $custom_includes = [
   'lib/function-get-featured-image-url.php',    // Scripts and stylesheets
   'lib/function-truncate-content.php',    // Scripts and stylesheets
   'lib/function-image_resize.php',    // Scripts and stylesheets
-
+  'lib/class-layoutbuilder.php',
+  'lib/supports.php',    // Create Custom Post Types
   'lib/aq_resizer.php',    // Scripts and stylesheets
+  'lib/function-get_section_options.php',    // Scripts and stylesheets
+  
 
 ];
 

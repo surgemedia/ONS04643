@@ -1,0 +1,21 @@
+.card.position {
+	h1 {
+		@extend .h4;
+		font-weight: bold;
+	}
+	p {
+		margin-top: 0px;
+		margin-bottom: 2em;
+
+	}
+	span {
+		font-size:1.6em;
+		margin:0em 0.3em;
+		
+	}
+	span + strong,
+	span + a {
+		font-size:1.6em;
+		font-weight: bold;
+	}
+}

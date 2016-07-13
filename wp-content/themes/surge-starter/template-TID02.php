@@ -6,71 +6,106 @@
 
 <?php while (have_posts()) : the_post(); ?>
 
-<?php
-			/*=============================================
-			=            	Card (Class,Image,Title,Content)
-			= @components
-				+ molecule/card-header
-			=============================================*/
-			get_component([ 'template' => 'molecule/card-header',
-											// 'remove_tags' =>  ['i'],
-											'vars' => [
-														"class" => 'col-md-12',
-														"image" => 'http://localhost/ONS04643/wp-content/uploads/2016/05/any1-1.jpg',
-														"subtitle" => "Onsite for the mining industry",
-														"title" => "One stop power shop",
-														"content" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe sed odit inventore a quo mollitia adipisci est placeat omnis earum quisquam minus sit iusto, accusamus et facere. Eligendi distinctio neque delectus natus, doloribus animi velit pariatur, minus vero. Dolores quis asperiores sequi maiores, doloribus, cum quia reprehenderit accusantium accusamus at.",
-														]
-											 ]);
-	 ?>
 
 <?php
 			/*=============================================
-			=            	Card (Class,Image,Title,Content)
+			= Category (Class,Subtile,Title,Category)
 			= @components
-				+ molecule/card
+				+ organism/paragraph-overlay
+				+ atom/gvform
 			=============================================*/
-			get_component([ 'template' => 'molecule/card',
-											// 'remove_tags' =>  ['i'],
-											'vars' => [
-														"class" => 'col-md-6',
-														"image" => 'http://localhost/ONS04643/wp-content/uploads/2016/05/any4-1.jpg',
-														"title" => "One stop power shop",
-														"content" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe sed odit inventore a quo mollitia adipisci est placeat omnis earum quisquam minus sit iusto, accusamus et facere. Eligendi distinctio neque delectus natus, doloribus animi velit pariatur, minus vero. Dolores quis asperiores sequi maiores, doloribus, cum quia reprehenderit accusantium accusamus at.",
-														]
-											 ]);
-	 ?>
-<?php
-
 
 			get_component([
-											'template' => 'atom/link',
-											// 'return_string' => true,
+											'template' => 'organism/industry-header',
 											'vars' => [
-														"class" => 'button text-uppercase',
-														"text" => 'Read More',
-														"url" => "get_permalink()"
-														]
+														"class" => 'border-bottom',
+ 														]
 										]);
 		 ?>
 
 
-
 <?php
 			/*=============================================
-			=      	Contact-Us (Class,Image,Title,Content)
+			= Category (Class,Subtile,Title,Category)
 			= @components
-				+ organism/contac-us
+				+ organism/paragraph-overlay
+				+ atom/gvform
 			=============================================*/
 
 			get_component([
-											'template' => 'organism/contact-us',
+											'template' => 'organism/category',
 											'vars' => [
-														"class" => 'col-xs-12',
-														"background" => get_field('background_form','option')
-														]
+														"class" => 'category container-fluid border-bottom grey-light-bg',
+														"subtitle" => "Mining Industry",
+														"title" => "onsite case studies",
+														'category' => 'mining'
+ 														]
 										]);
 		 ?>
+
+
+<?php
+			/*=============================================
+			= Contact-Us (Class,Background,Subtitle,Title,Description)
+			= @components
+				+ organism/paragraph-overlay
+				+ atom/gvform
+			=============================================*/
+
+			get_component([
+											'template' => 'organism/paragraph-overlay',
+											'remove_tags' =>  ['img'],
+											'vars' => [
+														"class" => 'contact-us container-fluid border-bottom',
+														"background" => "https://unsplash.it/1920/1080/?random",
+														// get_field('background_form','option')
+														"subtitle" => get_field('title_form','option'),
+														'title' => get_field('short_phone','option'),
+														"description" => get_field('description_form','option'),
+														"atom" =>  get_component([
+																'template' => 'atom/gvform',
+																'return_string' => true,
+																'vars' => []
+															])
+ 														]
+										]);
+		 ?>
+
+<?php
+			/*=============================================
+			= Category (Class,Subtile,Title,Category)
+			= @components
+				+ organism/gear
+			=============================================*/
+
+			get_component([
+											'template' => 'organism/gears',
+											'vars' => [
+														"class" => 'gears container-fluid  text-center border-bottom padding-6',
+														"title" => "The Gear",
+														'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consectetur itaque repellat explicabo doloribus officiis atque, porro quae eos consequatur.'
+ 														]
+										]);
+		 ?>
+
+
+<?php
+			/*=============================================
+			= Locator (Class, Description)
+			= @components
+				+ organism/locator
+			=============================================*/
+
+			get_component([
+											'template' => 'organism/locator',
+											'vars' => [
+														"class" => 'locator grey-light-bg text-center',
+ 														"description" => 'Find our rental and service locations throughout Australia.'
+ 														]
+										]);
+		 ?>
+
+
 
 
 <?php endwhile; ?>

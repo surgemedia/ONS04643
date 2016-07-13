@@ -1,0 +1,22 @@
+.section-col-12-floating {
+
+	.box{
+		background-color: rgba(255,255,255,0.8);
+		padding: 1em 3em 3em 3em;
+    margin: 2em 0;
+    overflow: hidden;
+
+    h3{
+    	/* @extend .some-h; */
+    	margin-bottom: 0;
+    	color:$orange;
+    }
+    h1{ 
+			margin-top: 0.3em;
+			b{ color:$orange;}
+    }
+		p{
+			margin-bottom: 2em;
+		}
+	}
+}
