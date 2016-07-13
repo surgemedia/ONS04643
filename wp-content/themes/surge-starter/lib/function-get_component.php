@@ -1,12 +1,4 @@
-<?php
-/**
- * Get Component for wordpress
- * @link 
- *
- * @author  Alex King
- * @version 0.2
- * @license http://www.opensource.org/licenses/mit-license.html MIT License
- */
+<?php 
 /*=====================================
 =            Add Component            =
 =====================================*/
@@ -34,6 +26,9 @@ function get_component($files = Array()){
 			}
 			ob_start(); //start object buffer 
 			$component = include(locate_template($compDir.$files['template'].'.php')); //instead of echoing it, its stored 
+			if($component == false){
+				echo 'Can not find file '.$files['template'].' in dir '.$compDir;
+			}
 			$component = ob_get_clean(); //set var to the stored buffer ( i believe this flats the vars)
 			/*=================================================
 			=    Add Inline Scoped Styles (Optional)            =

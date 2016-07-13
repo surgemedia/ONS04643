@@ -53,6 +53,8 @@ $custom_includes = [
   'lib/class-layoutbuilder.php',
   'lib/supports.php',    // Create Custom Post Types
   'lib/aq_resizer.php',    // Scripts and stylesheets
+  'lib/function-get_section_options.php',    // Scripts and stylesheets
+  
 
 ];
 

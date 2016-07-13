@@ -9,8 +9,8 @@
 	$equipment->menu_icon("dashicons-hammer");
 	//Define post type
 	$equipment->register_taxonomy([
-	    'taxonomy_name' => 'equipment',
-	    'plural' => 'Equipment',
+	    'taxonomy_name' => 'gear',
+	    'plural' => 'Gear',
 	]);
 	/*============================================
 	=            Services - Post Type            =
@@ -18,7 +18,7 @@
 	$services = new CPT('service');
 	$services->menu_icon("dashicons-info");
 	//add tax to post type
-	$services->register_taxonomy('equipment');
+	$services->register_taxonomy('gear');
 	//Define post type
 	$services->register_taxonomy([
 	    'taxonomy_name' => 'industry',

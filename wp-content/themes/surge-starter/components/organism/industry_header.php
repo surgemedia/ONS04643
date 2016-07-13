@@ -1,4 +1,4 @@
-<section class="<?php //echo $vars['class'] ?>">
+<section class="<?php echo $vars['class'] ?>">
 	<img class="top-banner" src="<?php echo $vars["image"]; ?>" alt="">
 
 	<?php

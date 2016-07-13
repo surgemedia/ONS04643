@@ -9,5 +9,8 @@
 		margin-bottom: 0px;
 
 	}
+	&.style1{
+		@extend .people-category;
+	}
 
 }

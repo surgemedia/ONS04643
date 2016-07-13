@@ -5,19 +5,7 @@
 ?>
 
 <?php while (have_posts()) : the_post(); ?>
-<?php 				
-							get_component([ 'template' => 'molecule/icon-nav',
-											'vars' => [
-														'repeater' =>[
-																["icon" => 'icon-mining', "link" => '#',"name"=>'Mining'],
-																["icon" => 'icon-industrial', "link" => '#',"name"=>'industrial'],
-																["icon" => 'icon-government', "link" => '#',"name"=>'government'],
-																["icon" => 'icon-infrastructure', "link" => '#',"name"=>'infrastructure'],
-																["icon" => 'icon-events', "link" => '#',"name"=>'events'],
-															]
-														]
-											 ]);
- ?>
+
 <section class="jumbotron border-bottom container-fluid" style="background-image:url('https://unsplash.it/1920/1080?image=1033')">
 		<div class="title col-md-7 col-md-offset-2"><h1 class="col-md-11">“ONSITE CONNECT REVOLUTIONISED HOW WE MANAGE OUR EQUIPMENT HIRE”</h1>
 		<a href="" class="btn">DISCOVER THE APP</a></div>

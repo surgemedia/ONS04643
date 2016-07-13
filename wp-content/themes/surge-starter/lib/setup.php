@@ -88,6 +88,9 @@ function display_sidebar() {
     is_page_template(),
     is_page(),
     is_single(),
+    is_tax(),
+    is_category(),
+
 
 
   ]);

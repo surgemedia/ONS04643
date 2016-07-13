@@ -48,11 +48,11 @@
 </div>
 </div>
 
-	<div id="map-canvas" style="height:525px"></div>
+	<div id="map-canvas" class="padding-2" style="height:525px"></div>
 
 <?php 
 	// google map script
-	get_component(['template' => 'molecule/map-script']);
+	get_component(['template' => 'atom/map-script']);
  ?>
 
 

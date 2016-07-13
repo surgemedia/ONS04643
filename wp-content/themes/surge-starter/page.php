@@ -1,77 +1,56 @@
 
-<?php //debug(get_field('layout')); 
+<?php
+if (is_front_page()){ ?>
+<?php 
+	get_component([ 'template' => 'organism/section-jumbotron-with-cards',
+											'remove_tags'=> get_field('remove_elements'),
+											'vars' => [
+														"class" => '',
+														"title" => get_field('title'),
+														"subtitle" => get_field('subtitle'),
+														"content" => get_field('content'),
+														"image" => get_field('background'),
+														"button" => get_field('button'),
 
-$layout_builder = get_field('layout'); 
-
-
-for ($section_count =0; $section_count  < sizeof($layout_builder); $section_count ++) {
-	//Start Class
-	$section = new LayoutBuilder;
- 	$section->setup($layout_builder[$section_count]['section']);
+														]
+											 ]);
  ?>
- <?php 
-/*===============================
-=            Section            =
-===============================*/
-?>
-<section id="section<?php echo $section_count; ?>" class="row">
-	<?php
-	/*===========================
-	=            ROW            =
-	===========================*/
-	
-	?>
-	<!-- GRID SECTION -->
-	<?php for ($row_count =0; $row_count  < sizeof($section->grids); $row_count ++) {  ?>
-		<div id="row<?php echo $section_count; ?>"  class="<?php echo $section->meta['class']; ?>">
+<?php }else{ ?>
+<?php 
+	get_component([ 'template' => 'organism/industry_header',
+											'remove_tags'=> get_field('remove_elements'),
+											'vars' => [
+														"class" => '',
+														"title" => get_field('title'),
+														"subtitle" => get_field('subtitle'),
+														"content" => get_field('content'),
+														"image" => get_field('background'),
+														"button" => get_field('button'),
 
-			<?php 
-			if($section->isGrid($section->rows[$row_count])){
-
-				foreach ($section->elements($row_count) as $key => $value) {
-				/*=========================================
-				=            Bootstrap Columns            =
-				=========================================*/
-					for ($col_i=0; $col_i < sizeof($section->elements($row_count)[$key]); $col_i++) { 
-					$section->bs_class($value[$col_i]);
-					?>
-					<div class="<?php echo $section->bs_class ?>">
-
-					<?php	
-					//debug($section->template);
-
-					/*===============================
-					=            Element            =
-					===============================*/
-					get_component([ 'template' => 'molecule/'.$section->template,
-										'remove_tags' =>  [''],
-														'vars' => $value[$col_i]
-														 ]);
-														 ?>
-					</div>
-				<?php	}
-			 ?>
-			 </div>
-			<?php } } else { ?>
-			<?php $section->bs_class($section->rows[$row_count]); ?>
-							<div class="<?php echo $section->bs_class ?>">
-							<?php	
-
-							//===============================
-							//=            Element            =
-							//===============================
-							get_component([ 'template' => 'organism/'.$section->template,
-												'remove_tags' =>  [''],
-																'vars' => $section->rows[$row_count]
-																 ]);
-																 ?>
-							</div>
-	
-			<?php } ?>
-		</div>
-	<?php } ?>
-
-
-
-</section>
+														]
+											 ]);
+ ?>
 <?php } ?>
+<div class="row">
+<?php
+$layout_builder = get_field('layout');
+
+foreach ($layout_builder as $key => $value) {
+	$section_file = $value['acf_fc_layout'];
+	unset($value['acf_fc_layout']); //of section
+	
+	//Section Options
+	$value['section_data'] = get_section_options($value);
+	$value['section_classes'] = 'class="'.$section_file.' '.$value['section_data']['border'].' '.$value['section_data']['background_color'].' '.$value['section_data']['section_width'].' '.$value['section_data']['padding'].' '.$value['section_data']['margin'].' '.$value['section_data']['text_align'].'"';
+	$value['section_id'] = 'id="'.$value['section_data']['id'].'"';
+	$value['section_style'] = 'style="background-image:url('.$value['section_data']['background_image'].');"';
+
+
+	//Call file for display
+			get_component([
+						'template' => 'organism/'.$section_file,
+						'vars' => $value
+			]);
+	unset($section_file);
+} ?>
+</div>

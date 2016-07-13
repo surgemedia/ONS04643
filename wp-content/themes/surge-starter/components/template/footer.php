@@ -11,3 +11,16 @@
 	    <?php dynamic_sidebar('sidebar-footer'); ?>
   </div>
 </footer>
+<?php 				
+							get_component([ 'template' => 'molecule/icon-nav',
+											'vars' => [
+														'repeater' =>[
+																["icon" => 'icon-mining', "link" => '#',"name"=>'Mining'],
+																["icon" => 'icon-industrial', "link" => '#',"name"=>'industrial'],
+																["icon" => 'icon-government', "link" => '#',"name"=>'government'],
+																["icon" => 'icon-infrastructure', "link" => '#',"name"=>'infrastructure'],
+																["icon" => 'icon-events', "link" => '#',"name"=>'events'],
+															]
+														]
+											 ]);
+ ?>
