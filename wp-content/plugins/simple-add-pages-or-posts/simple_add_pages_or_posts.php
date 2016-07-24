@@ -3,7 +3,8 @@
 Plugin Name: Simple add pages or posts
 Plugin URI: http://www.websitefreelancers.nl
 Description: Lets you add multiple pages or posts
-Version: 1.7
+Version: 1.8
+Text Domain: mp-simpleaddpagesorposts
 Author: Simon Dirlik, Ramon Fincken
 Author URI: http://www.websitefreelancers.nl
 Based on: http://www.mijnpress.nl/blog/plugin-framework/
@@ -15,6 +16,11 @@ if(!class_exists('mijnpress_plugin_framework'))
 {
 	include('mijnpress_plugin_framework.php');
 }
+
+function mp_plugin_simpleaddpagesorposts_load_plugin_textdomain() {
+    load_plugin_textdomain( 'mp-simpleaddpagesorposts', FALSE, basename( dirname( __FILE__ ) ) ); // Translations in current folder
+}
+add_action( 'plugins_loaded', 'mp_plugin_simpleaddpagesorposts_load_plugin_textdomain' );
 
 class plugin_simple_add_pages_or_posts extends mijnpress_plugin_framework
 {
@@ -41,7 +47,7 @@ class plugin_simple_add_pages_or_posts extends mijnpress_plugin_framework
 	function addPluginSubMenu()
 	{
 		$plugin = new plugin_simple_add_pages_or_posts();
-		parent::addPluginSubMenu($plugin->plugin_title,array($plugin->plugin_class, 'admin_menu'),__FILE__);
+		parent::addPluginSubMenu($plugin->plugin_title, array($plugin->plugin_class, 'admin_menu'), __FILE__);
 	}
 
 	/**
@@ -49,7 +55,7 @@ class plugin_simple_add_pages_or_posts extends mijnpress_plugin_framework
 	 */
 	function addPluginContent($links, $file) {
 		$plugin = new plugin_simple_add_pages_or_posts();
-		$links = parent::addPluginContent($plugin->plugin_filename,$links,$file,$plugin->plugin_config_url);
+		$links = parent::addPluginContent($plugin->plugin_filename, $links, $file, $plugin->plugin_config_url);
 		return $links;
 	}
 

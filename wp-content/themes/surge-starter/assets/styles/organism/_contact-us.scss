@@ -1,4 +1,15 @@
 .contact-us{
+		text-align:left;
+	hgroup{
+		h1{
+		}
+		h6{
+			color:$orange;
+		}
+	}
+	> p{
+		width:80%;
+	}
 	.gform_wrapper{
 		@extend .gform_wrapper;
 	}

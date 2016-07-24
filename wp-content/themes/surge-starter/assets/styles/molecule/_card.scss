@@ -12,5 +12,32 @@
 	&.style1{
 		@extend .people-category;
 	}
-
+	
+	&.style2{
+		hgroup{
+			h1{
+				
+			}	
+			h6{
+				
+			}
+		}
+		p{
+			width: 70%
+		}
+		img.inner{
+			float:right;
+			margin-right: 5%;
+		}
+	}
+	&.style3{
+		@extend .side-card;
+		position: relative;
+		a{
+			position: absolute;
+	    bottom: -97px;
+	    left: 0;
+	    right: 0;
+		}
+	}
 }

@@ -1,0 +1,5 @@
+.section-sub-gear{
+	article.gear:nth-child(2n){
+		border-top: 1px solid $grey;
+	}
+}

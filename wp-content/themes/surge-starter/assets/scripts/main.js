@@ -74,8 +74,8 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
-    /*=============================================
-  = Enabling multi-level navigation =
+  /*===============================================
+  =        Enabling multi-level navigation        =
   ===============================================*/
   $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
       event.preventDefault(); 

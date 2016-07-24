@@ -2,31 +2,33 @@
 	background:$blue;
 	width:100%;
 	z-index: 999;
-
-		.navbar-nav {
-		    display: inline-block;
-		    float: none;
-		    max-width: 70%;
+	&.affix + .wrap{
+		padding-top:54px;
+	}
+	.navbar-nav {
+	    display: inline-block;
+	    float: none;
+	    max-width: 70%;
+	}
+	.navbar-collapse {
+    text-align: center;
+	}
+	.menu-item {
+		position:relative;
+		&:after {
+			content: "";
+		    width: 2px;
+		    height: 45%;
+		    position: absolute;
+		    top: 1.25em;
+		    right: 0px;
+		    background: #fff;
 		}
-		.navbar-collapse {
-	    text-align: center;
+		
+		a {
+			@extend .menu-a;
 		}
-		.menu-item {
-			position:relative;
-			&:after {
-				content: "";
-			    width: 2px;
-			    height: 45%;
-			    position: absolute;
-			    top: 1.25em;
-			    right: 0px;
-			    background: #fff;
-			}
-			
-			a {
-				@extend .menu-a;
-			}
-		}
+	}
 	.navbar-brand {
 		float: left;
 	    font-size: 18px;

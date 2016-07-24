@@ -34,8 +34,7 @@ for ($section_count =0; $section_count  < sizeof($layout_builder); $section_coun
 					=            Element            =
 					===============================*/
 					get_component([ 'template' => 'organism/'.$section->rows[$row_count]['acf_fc_layout'],
-										'remove_tags' =>  [''],
-														'vars' => $section->rows[$row_count]
+													'vars' => $section->rows[$row_count]
 														 ]);
 														 ?>
 					</div>

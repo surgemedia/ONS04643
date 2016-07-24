@@ -13,18 +13,21 @@ die("Aren't you supposed to come here via WP-Admin?");
 // We need DB connection
 global $wpdb;
 
+// Init
+$separator = ((isset($_POST['separator'])) ? sanitize_text_field( $_POST['separator'] ) :  '-');
+
 /**
  * If submiting the form
  */
 if (isset ($_POST['submitbutton']) && isset ($_POST['postorpage'])) {
 
 	if (!isset( $_POST['nonce_check'] ) || ! wp_verify_nonce( $_POST['nonce_check'], 'mp_sapop' ) ) {
-		$message = $title = 'Sorry, your nonce did not verify.';
+		$message = $title = __('Sorry, your nonce did not verify.', 'mp-simpleaddpagesorposts');
 		wp_die( $message, $title);
 	}
 
 	if (!isset ($_POST['titles']) || !$_POST['titles']) {
-		echo '<div id="message" class="error">No titles given</div>';
+		echo '<div id="message" class="error">'.__('No titles given', 'mp-simpleaddpagesorposts').'</div>';
 	} else {
 		//Is magic quotes on?
 		if (get_magic_quotes_gpc()) {
@@ -70,7 +73,7 @@ if (isset ($_POST['submitbutton']) && isset ($_POST['postorpage'])) {
 				$title = trim($title);
 
 				// Now remove minus'ses at left position
-				$title_ltrim = ltrim($title,'-');
+				$title_ltrim = ltrim($title, $separator);
 				
 				// The level is the difference between trim and ltrim
 				$level = strlen($title)-strlen($title_ltrim);
@@ -173,55 +176,52 @@ if (isset ($_POST['submitbutton']) && isset ($_POST['postorpage'])) {
 				}
 			}
 		}
-		echo '<div id="message" class="updated fade">' . $i . ' new ' . $page_or_post . 's were created.</div>';
+		echo '<div id="message" class="updated fade">';
+		printf(
+		    /* translators: Page or post */
+		    __( '%s new %2$s(s) were created.', 'mp-simpleaddpagesorposts' ),
+		    number_format_i18n($i),
+		    $page_or_post
+		);
+		echo '</div>';
 	}
 }
 
 ?>
-<style>
-input[type="text"],input[type="password"],input[type="file"],select {
-	min-width: 250px;
-}
 
-textarea {
-	min-width: 300px;
-	min-height: 200px;
-}
-</style>
 <br />
 <h3>Custom Post Type support</h3>
 <p><a href="http://webshop.mijnpress.nl/product-category/plugins">Buy our premium plugin to add Custom Post Type (CPT) support!</a></p> 
 <br/>
 
-<form id="form1" name="form1" method="post" action=""
-	onsubmit="return confirm('Are you sure?')">
+<form id="mp_simpleaddpagesorposts" name="form1" method="post" action="" onsubmit="return confirm('<?php _e('Are you sure?', 'mp-simpleaddpagesorposts'); ?>')">
 
 <?php wp_nonce_field( 'mp_sapop', 'nonce_check' ); ?>
 <table class="widefat">
 	<thead>
 		<tr>
-			<th class="manage-column" style="width: 250px;">Option</th>
-			<th colspan="2" class="manage-column">Setting</th>
+			<th class="manage-column" style="width: 250px;"><?php _e('Option', 'mp-simpleaddpagesorposts'); ?></th>
+			<th colspan="2" class="manage-column"><?php _e('Setting', 'mp-simpleaddpagesorposts'); ?></th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr class="alternate iedit">
 			<td>Post or page:</td>
 			<td colspan="2"><select name="postorpage">
-				<option value="page">Page</option>
-				<option value="post">Post</option>
+				<option value="page"><?php _e('Page'); ?></option>
+				<option value="post"><?php _e('Post'); ?></option>
 			</select></td>
 		</tr>
 		<tr class="iedit">
-			<td>If it is a page:<br />
-			<small>Place the page(s) below another page?</small></td>
+         	<td><?= $info->labels->singular_name ?><br />
+         <small><?php _e('Place the', 'mp-simpleaddpagesorposts'); ?> <?= $info->labels->singular_name ?>(s) <?php _e('below another', 'mp-simpleaddpagesorposts'); ?> <?= $info->labels->singular_name ?>?</small></td>
 			<td colspan="2"><?php wp_dropdown_pages(array('exclude_tree' => 0, 'selected' => 0, 'name' => 'post_parent', 'show_option_none' => __('No, do not use parent'), 'sort_column'=> 'menu_order, post_title')); ?></td>
 		</tr>
 		<tr class="alternate iedit">
-			<td valign="top">Titles:<br />
-			<small>Each new post/page on a new line</small></td>
+			<td valign="top"><?php _e('Titles:', 'mp-simpleaddpagesorposts'); ?><br />
+			<small><?php _e('Each new post/page on a new line', 'mp-simpleaddpagesorposts'); ?></small></td>
 			<td><textarea name="titles" rows="8" cols="30"></textarea></td>
-			<td>Advanced multi-parent example<br/>
+			<td><?php _e('Advanced multi-parent example', 'mp-simpleaddpagesorposts'); ?><br/>
 			<textarea name="titles_disabled" disabled="disabled" rows="4" cols="30">Toplevel item1
 -Sub of toplevel item1
 -Sub of toplevel item1
@@ -233,7 +233,14 @@ Toplevel item2
 Toplevel item3</textarea></td>
 		</tr>
 		<tr class="iedit">
-			<td valign="top">Author of post/page:</td>
+			<td valign="top"><?php _e('Hierarchy separator:', 'mp-simpleaddpagesorposts'); ?><br/>
+			<small><?php _e('Change this to (for instance) * when your title list is indented by * instead of -', 'mp-simpleaddpagesorposts'); ?></small></td>
+			<td><input type="text" name="separator" value="<?php echo $separator; ?>" />
+</td>
+			<td></td>
+		</tr>
+		<tr class="alternate iedit">
+			<td valign="top"><?php _e('Author of post/page:', 'mp-simpleaddpagesorposts'); ?></td>
 			<td colspan="2"><select name="author_id">
 			<?php
 			$user_query = "SELECT ID, user_login, display_name, user_email FROM $wpdb->users ORDER BY ID ASC";
@@ -246,10 +253,35 @@ Toplevel item3</textarea></td>
 		</tr>
 	</tbody>
 </table>
-<input type="submit" name="submitbutton" value="Add"
+<input type="submit" name="submitbutton" value="<?php _e('Add', 'mp-simpleaddpagesorposts'); ?>"
 	class="button-primary"></form>
-<h3>How to use?</h3>
-<p class="updated">* Choose what you want to add: posts or pages<br />
-* Type the title of each post or page on a seperate line in the textarea<br />
-<strong>Optional:</strong><br />
-* If it is a page, select the parent page (Default: none)</p>
+
+
+<h3><?php _e('How to use?', 'mp-simpleaddpagesorposts'); ?></h3>
+<p class="updated">
+* <?php _e('Choose what you want to add: posts or pages', 'mp-simpleaddpagesorposts'); ?><br/>
+* <?php _e('Type the title of each post or page on a seperate line in the textarea', 'mp-simpleaddpagesorposts'); ?><br/><br/>
+
+<strong><?php _e('Optional:', 'mp-simpleaddpagesorposts'); ?></strong><br/>
+* <?php _e('If it is a page or any other hierachical CPT, select the parent page. It will show automatically. (Default: none)', 'mp-simpleaddpagesorposts'); ?></p>
+
+
+
+
+
+<style>
+form#mp_simpleaddpagesorposts {
+	margin-top: 15px;
+}
+#mp_simpleaddpagesorposts input[type="text"], 
+#mp_simpleaddpagesorposts input[type="password"],
+#mp_simpleaddpagesorposts input[type="file"],
+#mp_simpleaddpagesorposts select {
+	min-width: 250px;
+}
+
+#mp_simpleaddpagesorposts textarea {
+	min-width: 300px;
+	min-height: 200px;
+}
+</style>

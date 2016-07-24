@@ -1,7 +1,21 @@
 .card.gear {
-
-
-
+    hgroup{
+        h6{
+            margin-bottom: 0.6em;
+        }
+        h1{
+            margin-bottom: 0.6em;
+        }
+    }   
+    ul{
+        padding:0;
+        li{
+            @extend .p1;
+            font-size: 1.7em;
+            margin-left: 1em;
+            padding-left: .5em;
+        }
+    }
     .side-card {
         padding: 3em;
         border: 2px solid;
@@ -11,7 +25,11 @@
             padding: 0 0 .4em 0;
             margin: 0 0 0.4em 0;
         }
-        h3 {font-size: 4em;font-weight: 100;margin: 0 0 0.5em 0;}
+        h3 {
+            font-size: 4em;
+            font-weight: 100;
+            margin: 0 0 0.5em 0;
+        }
         p {
             font-size: 1.5em;
             display: block;

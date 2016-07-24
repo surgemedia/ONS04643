@@ -1,32 +1,35 @@
 <?php
 	$thisObj = get_term_by('slug', $wp_query->query_vars['gear'], $wp_query->query_vars['taxonomy']);
 	$vars = [
+			"remove_tags"=> get_field('remove_elements',$thisObj),
+			"class" => get_field('class',$thisObj),
 			"subtitle" => get_field('subtitle',$thisObj),
 			"title" => get_field('title',$thisObj),
 			"content" => get_field('content',$thisObj),
 			"button" => get_field('button',$thisObj),
+			"image" => get_field('image',$thisObj),
 			"background" => get_field('background',$thisObj),
 			"main_image" => get_field('main_image',$thisObj),
 			"gear_title" => $wp_query->query_vars['gear'],
 			"this" => $thisObj
 	];
-	 unset($thisObj);
- ?>
+	 unset($thisObj);    
+?>
 <?php 
 	get_component([ 'template' => 'organism/industry_header',
-											'remove_tags'=> get_field('remove_elements'),
+											'remove_tags'=> $vars["remove_tags"],
 											'vars' => [
-														"class" => 'container-fluid',
-														"title" => get_field('title',$vars['this']),
-														"subtitle" => get_field('subtitle',$vars['this']),
-														"content" => get_field('content',$vars['this']),
-														"image" => get_field('background',$vars['this']),
-														"button" => get_field('button',$vars['this']),
-
+														"background" => $vars["background"],
+														"class" => $vars["class"],
+														"title" => $vars["title"],
+														"subtitle" => $vars["subtitle"],
+														"content" => $vars["content"],
+														"image" => $vars["image"],
+														"button" => $vars["button"],
 														]
 											 ]);
  ?>
- <section class="light-grey-bg border-top">
+ <section class="light-grey-bg border-top padding-2 section-sub-gear">
 <?php
 		$vars['term_childern'] = get_term_children( $vars['this']->term_id, $vars['this']->taxonomy );
 ?> 
@@ -67,28 +70,66 @@ for ($vars['i']=0; $vars['i'] < $vars['term_childern_size']; $vars['i']++) {
 			get_component([ 'template' => 'molecule/card-sub-gear',
                             'vars' => [
                             			"id" => $vars['this']->slug,
-                                  "class" => 'container card gear',
+                                  "class" => 'container card gear padding-4',
                                   "subtitle" => $vars['gear_title'],
                                   "title" => $vars['this']->name,
                                   "image" => get_field("background",$vars['this']),
-                                 "term_chidlen" => $vars['childern_posts'],
-                                  'side_subtitle' => get_field("subtitle",$vars['this']),
-                                  'side_title' => get_field("title",$vars['this']),
-
-                                   'side_content' => get_field("content",$vars['this']),
-                                  "side_button" => get_component([
-                                      'template' => 'atom/link',
-                                      'return_string' => true,
-                                      'vars' => [
-                                        "class" => 'btn text-uppercase pull-left',
-                                        "text" => "Download Specsheet",
-                                        "url" => get_field("spec_sheet",$vars['this']),
-                                            ]
-                                      ])
-                                  ]
+                                  "term_chidlen" => $vars['childern_posts'],
+                                  "side_remove_elements" => get_field("remove_elements",$vars['this']),
+                                  "side_image" => get_field("image",$vars['this']),
+                                  "side_class" => get_field("class",$vars['this']),
+                                  "side_subtitle" => get_field("subtitle",$vars['this']),
+                                  "side_title" => get_field("title",$vars['this']),
+                                  "side_content" => get_field("content",$vars['this']),
+                                  "side_button" => get_field("button",$vars['this'])
+                                   ]
                              ]);
                               
  
 } ?>
+
+
+
+
  </section>
 
+<?php $vars['front_page'] =  get_option('page_on_front');
+			$vars['builder'] = get_field('layout',$vars['front_page']);
+			
+			foreach ($vars['builder'] as $key => $layout) {
+				if($layout['acf_fc_layout'] == 'section-col-12-floating' && $layout['id'] == "contact-form"){					
+					// debug($layout);
+					//Section Options
+					
+					$section_classes = 'class="'.$layout['acf_fc_layout'].' '.$layout['border'].' '.$layout['background_color'].' '.$layout['section_width'].' '.$layout['padding'].' '.$layout['margin'].' '.$layout['text_align'].'"';
+					$section_style = 'style="background-image:url('.$layout['background_image'].');"';
+					get_component([ 'template' => 'organism/section-col-12-floating',
+													'vars' => [
+																"section_id" => "id=".$layout['id'],
+																"section_classes" => $section_classes,
+																"section_style" => $section_style,
+																"element" => $layout['element'],
+																]
+													 ]);
+				}
+
+				if($layout['acf_fc_layout'] == 'section-locator'){					
+					
+					//Section Options
+					
+					$section_classes = 'class="'.$layout['acf_fc_layout'].' '.$layout['border'].' '.$layout['background_color'].' '.$layout['section_width'].' '.$layout['padding'].' '.$layout['margin'].' '.$layout['text_align'].'"';
+					$section_style = 'style="background-image:url('.$layout['background_image'].');"';
+					get_component([ 'template' => 'organism/section-locator',
+													'vars' => [
+																"section_id" => "id=".$layout['id'],
+																"section_classes" => $section_classes,
+																"section_style" => $section_style,
+																"subtitle" => $layout['subtitle'],
+																"title" => $layout['title'],
+																"content" => $layout['content']
+																]
+													 ]);
+				}
+
+			} 
+?>

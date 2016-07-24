@@ -1,3 +1,4 @@
+<div class="row">
 
 <?php
 if (is_front_page()){ ?>
@@ -11,27 +12,26 @@ if (is_front_page()){ ?>
 														"content" => get_field('content'),
 														"image" => get_field('background'),
 														"button" => get_field('button'),
-
 														]
 											 ]);
  ?>
 <?php }else{ ?>
 <?php 
+
 	get_component([ 'template' => 'organism/industry_header',
 											'remove_tags'=> get_field('remove_elements'),
 											'vars' => [
-														"class" => '',
+														"background" => get_field('background'),
+														"class" => get_field('class'),
 														"title" => get_field('title'),
 														"subtitle" => get_field('subtitle'),
 														"content" => get_field('content'),
-														"image" => get_field('background'),
+														"image" => get_field('image'),
 														"button" => get_field('button'),
-
 														]
 											 ]);
  ?>
 <?php } ?>
-<div class="row">
 <?php
 $layout_builder = get_field('layout');
 

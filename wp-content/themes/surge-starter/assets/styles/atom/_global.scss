@@ -85,7 +85,7 @@ p,.p1 {
 	font-family:$font-family;
 	font-size:1.3em;
 	line-height: 25px;
-    font-weight: 400;
+  font-weight: 400;
 	margin-bottom: 2.5em;
 }
 .p2 {
@@ -110,6 +110,16 @@ a,.a {
 section {
 	overflow:hidden;
 	background-size:cover;
+}
+
+ul{
+	li{
+		@extend .p1;
+		margin-bottom: 1em;
+		p{
+			font-size: inherit;
+		}
+	}
 }
 /*=========================================
 =            BOOSTRAP OVERIDES            =

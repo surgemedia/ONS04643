@@ -2,6 +2,7 @@
 	margin: 0;
   max-width: 100%;
 	form{
+		position:relative;
 		.gform_heading{
 			margin-bottom: 0;
 			.gform_title{
@@ -12,7 +13,6 @@
 			}
 		}
 		.gform_body{
-			position:relative;
 			.gform_fields{
 				.gfield{
 					width: 50%;
@@ -32,7 +32,7 @@
 						select{
 						}
 						textarea{
-							height:146px;
+							height:162px;
 						}
 						.chosen-container {
 							width: 97.5% !important;
@@ -91,13 +91,20 @@
 		}
 		.gform_footer{
 			width: 50%;
-	    float: right;
 	    margin: 0;
 	    padding: 0;
-	    margin-top: -51px;
+	    position:absolute;
+	    bottom:0;
+	    right:0;
 			input[type=submit].gform_button{
+				@extend .h6;
 				width:100%;
 				text-transform: uppercase;
+				color:#fff;
+				margin:0;
+				&:hover{
+					color:$grey-dark;
+				}
 			}
 		}
 	}

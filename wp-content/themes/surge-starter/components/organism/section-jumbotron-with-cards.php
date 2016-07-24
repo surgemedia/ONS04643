@@ -1,4 +1,4 @@
-<section class="jumbotron border-bottom container-fluid" style="background-image:url('<?php echo $vars['image']; ?>')">
+<section class="jumbotron container-fluid" style="background-image:url('<?php echo $vars['image']; ?>')">
 		<div class="title col-md-7 col-md-offset-2"><h1 class="col-md-11">“ <?php echo $vars["title"]; ?>	”</h1>
 		<?php echo $vars["button"] ?>
 		</div>

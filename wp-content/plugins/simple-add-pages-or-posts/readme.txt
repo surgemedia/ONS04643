@@ -3,8 +3,8 @@ Contributors: Simon Dirlik, Ramon Fincken
 Donate link: http://donate.ramonfincken.com
 Tags: admin,admins,add,mass,simple,easy,post,posts,page,pages,multiple,about,default
 Requires at least: 3.0
-Tested up to: 4.4.1
-Stable tag: 1.7
+Tested up to: 4.5.3
+Stable tag: 1.8
 
 Plugin to simply add multiple posts or pages at once by entering their titles. Handy tool if you have a new blog and want to quickly add pages..
 
@@ -13,7 +13,7 @@ Plugin to simply add multiple posts or pages at once by entering their titles. H
 Plugin to simply add multiple posts or pages at once by entering their titles. Handy tool if you have a new blog and want to quickly add pages like Home, About, Contact ...
 
 <br>
-<a href="http://webshop.mijnpress.nl/product-category/plugins">Buy our premium plugin to add Custom Post Type (CPT) support!</a>
+<a href="https://webshop.mijnpress.nl/shop/simple-add-pages-posts-cpt">Buy our premium plugin to add Custom Post Type (CPT) support!</a>
 
 <br>
 <br>Coding by: <a href="http://www.mijnpress.nl">MijnPress.nl</a> <a href="http://twitter.com/#!/ramonfincken">Twitter profile</a> <a href="http://wordpress.org/extend/plugins/profile/ramon-fincken">More plugins</a>
@@ -33,6 +33,10 @@ I always check my tweets, so mention my name with @ramonfincken and your problem
 
 
 == Changelog ==
+= 1.8 =
+* Added: Translation ready<br>
+* Added: Hierarchy separator to replace default minus-sign by anything you want :)
+
 = 1.7 =
 * Added: Nonce in form, alltough input is escaped and needs you to be logged in as an admin (who is able to delete users) this will
 prevent CSRF. Thanks to pluginvulnerabilities.com for reporting
