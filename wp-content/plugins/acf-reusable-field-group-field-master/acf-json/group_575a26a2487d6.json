@@ -1,9 +1,9 @@
 {
-    "key": "group_57578ce8e8b7b",
-    "title": "Page Heading",
+    "key": "group_575a26a2487d6",
+    "title": "Card - Element",
     "fields": [
         {
-            "key": "field_57639b9657c14_575a2cb763686",
+            "key": "field_575a2cb763686",
             "label": "Card",
             "name": "",
             "prefix": "",
@@ -25,7 +25,7 @@
             "endpoint": 1
         },
         {
-            "key": "field_57639b9657c14_5760fe6182257",
+            "key": "field_5760fe6182257",
             "label": "No Field Selected",
             "name": "",
             "prefix": "",
@@ -39,22 +39,22 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_57639b9657c14_575a2d9263690",
+                        "field": "field_575a2d9263690",
                         "operator": "==",
                         "value": "h6"
                     },
                     {
-                        "field": "field_57639b9657c14_575a2d9263690",
+                        "field": "field_575a2d9263690",
                         "operator": "==",
                         "value": "h1"
                     },
                     {
-                        "field": "field_57639b9657c14_575a2d9263690",
+                        "field": "field_575a2d9263690",
                         "operator": "==",
                         "value": "p"
                     },
                     {
-                        "field": "field_57639b9657c14_575a2d9263690",
+                        "field": "field_575a2d9263690",
                         "operator": "==",
                         "value": "Button"
                     }
@@ -71,7 +71,7 @@
             "esc_html": 0
         },
         {
-            "key": "field_57639b9657c14_575a2cf963687",
+            "key": "field_575a2cf963687",
             "label": "Subtitle",
             "name": "subtitle",
             "prefix": "",
@@ -85,7 +85,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_57639b9657c14_575a2d9263690",
+                        "field": "field_575a2d9263690",
                         "operator": "!=",
                         "value": "h6"
                     }
@@ -106,7 +106,7 @@
             "disabled": 0
         },
         {
-            "key": "field_57639b9657c14_575a2d0d63688",
+            "key": "field_575a2d0d63688",
             "label": "Title",
             "name": "title",
             "prefix": "",
@@ -120,7 +120,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_57639b9657c14_575a2d9263690",
+                        "field": "field_575a2d9263690",
                         "operator": "!=",
                         "value": "h1"
                     }
@@ -141,7 +141,7 @@
             "disabled": 0
         },
         {
-            "key": "field_57639b9657c14_575a2d1963689",
+            "key": "field_575a2d1963689",
             "label": "Content",
             "name": "content",
             "prefix": "",
@@ -155,7 +155,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_57639b9657c14_575a2d9263690",
+                        "field": "field_575a2d9263690",
                         "operator": "!=",
                         "value": "p"
                     }
@@ -173,7 +173,7 @@
             "media_upload": 1
         },
         {
-            "key": "field_57639b9657c14_57954edcb6b47_575a2d2b6368a",
+            "key": "field_57954edcb6b47_575a2d2b6368a",
             "label": "Button",
             "name": "button",
             "prefix": "",
@@ -198,7 +198,7 @@
             "button_label": "Add Button",
             "sub_fields": [
                 {
-                    "key": "field_57639b9657c14_57954edcb6b47_575a2d336368b",
+                    "key": "field_57954edcb6b47_575a2d336368b",
                     "label": "Text",
                     "name": "text",
                     "prefix": "",
@@ -225,7 +225,7 @@
                     "disabled": 0
                 },
                 {
-                    "key": "field_57639b9657c14_57954edcb6b47_575a2d3e6368c",
+                    "key": "field_57954edcb6b47_575a2d3e6368c",
                     "label": "Link Type",
                     "name": "link_type",
                     "prefix": "",
@@ -256,7 +256,7 @@
                     "layout": "vertical"
                 },
                 {
-                    "key": "field_57639b9657c14_57954edcb6b47_578c25e400541",
+                    "key": "field_57954edcb6b47_578c25e400541",
                     "label": "Link",
                     "name": "internal_link",
                     "prefix": "",
@@ -270,7 +270,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_57639b9657c14_57954edcb6b47_575a2d3e6368c",
+                                "field": "field_57954edcb6b47_575a2d3e6368c",
                                 "operator": "==",
                                 "value": "internal"
                             }
@@ -292,7 +292,7 @@
                     "multiple": 0
                 },
                 {
-                    "key": "field_57639b9657c14_57954edcb6b47_578c260c00542",
+                    "key": "field_57954edcb6b47_578c260c00542",
                     "label": "Link",
                     "name": "external_link",
                     "prefix": "",
@@ -306,7 +306,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_57639b9657c14_57954edcb6b47_575a2d3e6368c",
+                                "field": "field_57954edcb6b47_575a2d3e6368c",
                                 "operator": "==",
                                 "value": "external"
                             }
@@ -322,7 +322,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_57639b9657c14_57954edcb6b47_578c262a00543",
+                    "key": "field_57954edcb6b47_578c262a00543",
                     "label": "Link",
                     "name": "anchor_link",
                     "prefix": "",
@@ -336,7 +336,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_57639b9657c14_57954edcb6b47_575a2d3e6368c",
+                                "field": "field_57954edcb6b47_575a2d3e6368c",
                                 "operator": "==",
                                 "value": "anchor"
                             }
@@ -357,7 +357,7 @@
                     "disabled": 0
                 },
                 {
-                    "key": "field_57639b9657c14_57954edcb6b47_578c6e36bbee3",
+                    "key": "field_57954edcb6b47_578c6e36bbee3",
                     "label": "Link",
                     "name": "archive_link",
                     "prefix": "",
@@ -371,7 +371,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_57639b9657c14_57954edcb6b47_575a2d3e6368c",
+                                "field": "field_57954edcb6b47_575a2d3e6368c",
                                 "operator": "==",
                                 "value": "archive"
                             }
@@ -390,7 +390,7 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_57639b9657c14_57954edcb6b47_578c6bb822d19",
+                    "key": "field_57954edcb6b47_578c6bb822d19",
                     "label": "Create other window",
                     "name": "create_other_window",
                     "prefix": "",
@@ -414,7 +414,7 @@
             ]
         },
         {
-            "key": "field_57639b9657c14_575a2d606368d",
+            "key": "field_575a2d606368d",
             "label": "Image",
             "name": "",
             "prefix": "",
@@ -436,7 +436,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_57639b9657c14_5760ff240ce63",
+            "key": "field_5760ff240ce63",
             "label": "No image",
             "name": "",
             "prefix": "",
@@ -450,7 +450,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_57639b9657c14_575a2d9263690",
+                        "field": "field_575a2d9263690",
                         "operator": "==",
                         "value": "img"
                     }
@@ -467,7 +467,7 @@
             "esc_html": 0
         },
         {
-            "key": "field_57639b9657c14_575a2d686368e",
+            "key": "field_575a2d686368e",
             "label": "Image",
             "name": "image",
             "prefix": "",
@@ -481,7 +481,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_57639b9657c14_575a2d9263690",
+                        "field": "field_575a2d9263690",
                         "operator": "!=",
                         "value": "img"
                     }
@@ -505,7 +505,7 @@
             "mime_types": ""
         },
         {
-            "key": "field_57639b9657c14_575a2d7a6368f",
+            "key": "field_575a2d7a6368f",
             "label": "Options",
             "name": "",
             "prefix": "",
@@ -527,7 +527,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_57639b9657c14_575a2d9263690",
+            "key": "field_575a2d9263690",
             "label": "Remove Elements",
             "name": "remove_elements",
             "prefix": "",
@@ -559,7 +559,7 @@
             "toggle": 0
         },
         {
-            "key": "field_57639b9657c14_576c78ae19688",
+            "key": "field_576c78ae19688",
             "label": "Styles",
             "name": "class",
             "prefix": "",
@@ -597,7 +597,7 @@
             "readonly": 0
         },
         {
-            "key": "field_57639b9657c14_576099e13da64",
+            "key": "field_576099e13da64",
             "label": "",
             "name": "",
             "prefix": "",
@@ -617,107 +617,14 @@
             "_input": "",
             "placement": "top",
             "endpoint": 1
-        },
-        {
-            "key": "field_5775fa533fe68",
-            "label": "Case Studies",
-            "name": "case_studies",
-            "prefix": "",
-            "type": "relationship",
-            "value": null,
-            "menu_order": 1,
-            "instructions": "",
-            "required": 0,
-            "id": "",
-            "class": "",
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 50,
-                "class": "",
-                "id": ""
-            },
-            "_input": "",
-            "post_type": [
-                "case-study"
-            ],
-            "taxonomy": [
-
-            ],
-            "filters": [
-                "search",
-                "taxonomy"
-            ],
-            "elements": [
-                "featured_image"
-            ],
-            "min": "",
-            "max": "",
-            "return_format": "id"
-        },
-        {
-            "key": "field_5768cfc96b2e2",
-            "label": "Background",
-            "name": "background",
-            "prefix": "",
-            "type": "image",
-            "value": null,
-            "menu_order": 2,
-            "instructions": "",
-            "required": 1,
-            "id": "",
-            "class": "",
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 50,
-                "class": "",
-                "id": ""
-            },
-            "_input": "",
-            "return_format": "url",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_57578e7c651d8",
-            "label": "Id",
-            "name": "id",
-            "prefix": "",
-            "type": "text",
-            "value": null,
-            "menu_order": 3,
-            "instructions": "",
-            "required": 0,
-            "id": "",
-            "class": "",
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 50,
-                "class": "",
-                "id": ""
-            },
-            "_input": "",
-            "default_value": "",
-            "placeholder": "Optional",
-            "prepend": "#",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
         }
     ],
     "location": [
         [
             {
-                "param": "page_type",
+                "param": "post_type",
                 "operator": "==",
-                "value": "front_page"
+                "value": "post"
             }
         ]
     ],

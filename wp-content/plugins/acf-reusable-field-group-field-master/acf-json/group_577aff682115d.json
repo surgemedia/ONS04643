@@ -202,7 +202,7 @@
                             "media_upload": 1
                         },
                         {
-                            "key": "field_577b0a249d8e4_575a2d2b6368a",
+                            "key": "field_577b0a249d8e4_57954edcb6b47_575a2d2b6368a",
                             "label": "Button",
                             "name": "button",
                             "prefix": "",
@@ -213,15 +213,7 @@
                             "required": 0,
                             "id": "",
                             "class": "",
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_577b0a249d8e4_575a2d9263690",
-                                        "operator": "!=",
-                                        "value": "Button"
-                                    }
-                                ]
-                            ],
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -235,7 +227,7 @@
                             "button_label": "Add Button",
                             "sub_fields": [
                                 {
-                                    "key": "field_577b0a249d8e4_575a2d336368b",
+                                    "key": "field_577b0a249d8e4_57954edcb6b47_575a2d336368b",
                                     "label": "Text",
                                     "name": "text",
                                     "prefix": "",
@@ -262,7 +254,7 @@
                                     "disabled": 0
                                 },
                                 {
-                                    "key": "field_577b0a249d8e4_575a2d3e6368c",
+                                    "key": "field_577b0a249d8e4_57954edcb6b47_575a2d3e6368c",
                                     "label": "Link Type",
                                     "name": "link_type",
                                     "prefix": "",
@@ -293,7 +285,7 @@
                                     "layout": "vertical"
                                 },
                                 {
-                                    "key": "field_577b0a249d8e4_578c25e400541",
+                                    "key": "field_577b0a249d8e4_57954edcb6b47_578c25e400541",
                                     "label": "Link",
                                     "name": "internal_link",
                                     "prefix": "",
@@ -307,7 +299,7 @@
                                     "conditional_logic": [
                                         [
                                             {
-                                                "field": "field_577b0a249d8e4_575a2d3e6368c",
+                                                "field": "field_577b0a249d8e4_57954edcb6b47_575a2d3e6368c",
                                                 "operator": "==",
                                                 "value": "internal"
                                             }
@@ -329,7 +321,7 @@
                                     "multiple": 0
                                 },
                                 {
-                                    "key": "field_577b0a249d8e4_578c260c00542",
+                                    "key": "field_577b0a249d8e4_57954edcb6b47_578c260c00542",
                                     "label": "Link",
                                     "name": "external_link",
                                     "prefix": "",
@@ -343,7 +335,7 @@
                                     "conditional_logic": [
                                         [
                                             {
-                                                "field": "field_577b0a249d8e4_575a2d3e6368c",
+                                                "field": "field_577b0a249d8e4_57954edcb6b47_575a2d3e6368c",
                                                 "operator": "==",
                                                 "value": "external"
                                             }
@@ -359,7 +351,7 @@
                                     "placeholder": ""
                                 },
                                 {
-                                    "key": "field_577b0a249d8e4_578c262a00543",
+                                    "key": "field_577b0a249d8e4_57954edcb6b47_578c262a00543",
                                     "label": "Link",
                                     "name": "anchor_link",
                                     "prefix": "",
@@ -373,7 +365,7 @@
                                     "conditional_logic": [
                                         [
                                             {
-                                                "field": "field_577b0a249d8e4_575a2d3e6368c",
+                                                "field": "field_577b0a249d8e4_57954edcb6b47_575a2d3e6368c",
                                                 "operator": "==",
                                                 "value": "anchor"
                                             }
@@ -394,7 +386,7 @@
                                     "disabled": 0
                                 },
                                 {
-                                    "key": "field_577b0a249d8e4_578c6e36bbee3",
+                                    "key": "field_577b0a249d8e4_57954edcb6b47_578c6e36bbee3",
                                     "label": "Link",
                                     "name": "archive_link",
                                     "prefix": "",
@@ -408,7 +400,7 @@
                                     "conditional_logic": [
                                         [
                                             {
-                                                "field": "field_577b0a249d8e4_575a2d3e6368c",
+                                                "field": "field_577b0a249d8e4_57954edcb6b47_575a2d3e6368c",
                                                 "operator": "==",
                                                 "value": "archive"
                                             }
@@ -427,7 +419,7 @@
                                     "mime_types": ""
                                 },
                                 {
-                                    "key": "field_577b0a249d8e4_578c6bb822d19",
+                                    "key": "field_577b0a249d8e4_57954edcb6b47_578c6bb822d19",
                                     "label": "Create other window",
                                     "name": "create_other_window",
                                     "prefix": "",
