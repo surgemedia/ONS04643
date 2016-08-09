@@ -1,6 +1,6 @@
 <footer id="footer" class="content-info container-fluid text-center  padding-4">
   <div class="container">
-		<img src="https://unsplash.it/300/100" alt="" width="300" height="100">
+		<img src="<?php echo get_field("footer_image","option") ?>" alt="" width="300" height="100">
 		
 		<ul class="list-inline">
 			<li>&copy; Copyright <?php echo date('Y'); ?> <?php bloginfo('name'); ?></li>
@@ -11,6 +11,11 @@
 	    <?php dynamic_sidebar('sidebar-footer'); ?>
   </div>
 </footer>
+<?php
+/*      if (has_nav_menu('side_navigation')) :
+         wp_nav_menu(['theme_location' => 'side_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav side-nav ']);
+      endif;
+*/      ?>
 <?php 				
 							get_component([ 'template' => 'molecule/icon-nav',
 											'vars' => [

@@ -17,8 +17,8 @@
 ?>
 <?php 
 	get_component([ 'template' => 'organism/industry_header',
-											'remove_tags'=> $vars["remove_tags"],
 											'vars' => [
+														'remove_tags'=> $vars["remove_tags"],
 														"background" => $vars["background"],
 														"class" => $vars["class"],
 														"title" => $vars["title"],

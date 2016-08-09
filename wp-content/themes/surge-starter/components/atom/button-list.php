@@ -14,19 +14,19 @@ if (1<$button_size) : ?>
 				$link = (!empty($button['external_link'])) ? $button['external_link'] : '#no-link';
 				break;
 			case 'anchor':
-				$link = "#".(!empty($button['anchor_link'])) ? $button['anchor_link'] : '#no-link';
+				$link = (!empty($button['anchor_link'])) ? "#".$button['anchor_link'] : '#no-link';
 				break;
 			case 'archive':
-				$link = "#".(!empty($button['archive_link'])) ? $button['archive_link'] : '#no-link';
+				$link = (!empty($button['archive_link'])) ? $button['archive_link'] : '#no-link';
 				break;
 			default:
 				$link = (!empty($button['link'])) ? $button['link'] : '#no-link';
 				break;
 		}  
 		if($button['create_other_window'])
-			$button['extra-data'] .=" target='_blank'";
+			$button['extra_data'] .=" target='_blank'";
 		?>
-		<a class="btn text-uppercase <?php echo $button['class']?>" href="<?php echo $link?>" <?php echo $button['extra-data'] ?>> <?php echo $button['text']; ?> </a>
+		<a class="btn text-uppercase <?php echo $button['class']?>" href="<?php echo $link?>" <?php echo $button['extra_data'] ?>> <?php echo $button['text']; ?> </a>
 	<?php } ?>
 <?php if (1<$button_size) : ?>
 </div>

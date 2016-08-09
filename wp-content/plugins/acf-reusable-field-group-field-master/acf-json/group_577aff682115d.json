@@ -51,7 +51,7 @@
                             },
                             "_input": "",
                             "placement": "top",
-                            "endpoint": 1
+                            "endpoint": 0
                         },
                         {
                             "key": "field_577b0a249d8e4_5760fe6182257",
@@ -208,12 +208,20 @@
                             "prefix": "",
                             "type": "repeater",
                             "value": null,
-                            "menu_order": 5,
+                            "menu_order": 0,
                             "instructions": "",
                             "required": 0,
                             "id": "",
                             "class": "",
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_577b0a249d8e4_575a2d9263690",
+                                        "operator": "!=",
+                                        "value": "Button"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -439,6 +447,33 @@
                                     "_input": "",
                                     "message": "",
                                     "default_value": 0
+                                },
+                                {
+                                    "key": "field_577b0a249d8e4_57954edcb6b47_57985b31e9733",
+                                    "label": "Extra Data",
+                                    "name": "extra_data",
+                                    "prefix": "",
+                                    "type": "text",
+                                    "value": null,
+                                    "menu_order": 7,
+                                    "instructions": "",
+                                    "required": "",
+                                    "id": "",
+                                    "class": "",
+                                    "conditional_logic": "",
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "_input": "",
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
                                 }
                             ]
                         },

@@ -1,6 +1,6 @@
 <?php// echo debug($vars); ?>
 
-<section class="<?php echo $vars['class'] ?>">
+<section class="">
 	<img class="top-banner" src="<?php echo $vars["background"]; ?>" alt="">
 
 	<?php

@@ -4,7 +4,7 @@
     padding: 0;
     position: fixed;
     top: 5em;
-    left: -5em;
+    left: 0em;
     width: 12em;
     overflow: hidden;
     z-index: 99999;
@@ -16,6 +16,7 @@
 	    float: left;
 	    margin-bottom: 2px;
 	    width:100%;
+	    font-size: 1em;
 		a {
 			line-height: 1em;
     		display: block;
@@ -29,7 +30,7 @@
 	    	transition:0.2s all ease;
 
 			i {
-				font-size: 6em;
+				font-size: 4em;
 			    display: inline;
 			    clear: both;
 			    line-height: 1em;
