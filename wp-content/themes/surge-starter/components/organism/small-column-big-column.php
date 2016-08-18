@@ -1,7 +1,3 @@
-<?php 
-$vars['section_data'] = get_section_options($vars);
- ?>
-<section id="<?php echo $vars['section_data']['id'] ?>" class="<?php echo $vars['section_data']['background_color'] ?> <?php echo $vars['section_data']['section_width'] ?> <?php echo $vars['section_data']['padding'] ?> <?php echo $vars['section_data']['margin'] ?>" style="background-image:url(<?php echo $vars['section_data']['background_image'] ?>);">
 <?php
 	/*=====================================
 	=            Get Files            =
@@ -26,12 +22,12 @@ $vars['section_data'] = get_section_options($vars);
 	//Element L
 	get_component([
 	 'template' => 'molecule/'.$element_file_l,
-	 'vars' => $element_vars
+	 'vars' => $element_vars_l
 			]);
 	//Element R
 	get_component([
 	 'template' => 'molecule/'.$element_file_r,
-	 'vars' => $element_vars
+	 'vars' => $element_vars_r
 			]);
 	unset($element_file_l);
 	unset($element_file_r);
@@ -39,4 +35,4 @@ $vars['section_data'] = get_section_options($vars);
 	unset($element_vars_r);
 
  ?>
-</section>
+

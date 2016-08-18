@@ -1,12 +1,3 @@
-<?php 
-$vars['section_data'] = get_section_options($vars);
- ?>
-<?php if(!isset($vars['background_image'])){ 
-		 $vars['background_image'] = $vars['image'];
-	}
-	?>
-<section id="<?php echo $vars['section_data']['id'] ?>" class="<?php echo $vars['section_data']['section_width'] ?> <?php echo $vars['section_data']['padding'] ?> <?php echo $vars['section_data']['margin'] ?>" style="background-image:url(<?php echo $vars['section_data']['background_image'] ?>); background-color:<?php echo $vars['section_data']['background_color'] ?>">
-
 	<div class="col-md-4 col-md-offset-4 text-center">
 		<div class="box">
 		<?php 
@@ -30,4 +21,3 @@ $vars['section_data'] = get_section_options($vars);
 		 ?>
 		</div>
 	</div>
-</section>

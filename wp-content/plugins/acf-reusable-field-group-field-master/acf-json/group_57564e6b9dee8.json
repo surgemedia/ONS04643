@@ -27,7 +27,7 @@
             "layouts": [
                 {
                     "key": "57563c32414cc",
-                    "name": "section-col-12-floating",
+                    "name": "floating",
                     "label": "Background image with floating element",
                     "display": "block",
                     "sub_fields": [
@@ -2766,7 +2766,7 @@
                 },
                 {
                     "key": "57563ee225179",
-                    "name": "section-col-12-n1",
+                    "name": "one-column",
                     "label": "One Column",
                     "display": "block",
                     "sub_fields": [
@@ -5505,7 +5505,7 @@
                 },
                 {
                     "key": 5756433728071,
-                    "name": "section-col-6-n2",
+                    "name": "two-columns",
                     "label": "Two Columns",
                     "display": "block",
                     "sub_fields": [
@@ -10703,7 +10703,7 @@
                 },
                 {
                     "key": "575a49b8fd445",
-                    "name": "section-col-4-n3",
+                    "name": "three-columns",
                     "label": "Three Columns",
                     "display": "block",
                     "sub_fields": [
@@ -18338,7 +18338,7 @@
                 },
                 {
                     "key": "575a4190d0016",
-                    "name": "section-col-3-n4",
+                    "name": "four-columns",
                     "label": "Four Columns",
                     "display": "block",
                     "sub_fields": [
@@ -28410,7 +28410,7 @@
                 },
                 {
                     "key": "575665dbc4a79",
-                    "name": "section-col-12-contact",
+                    "name": "contact",
                     "label": "Contact Form Section",
                     "display": "block",
                     "sub_fields": [
@@ -28734,7 +28734,7 @@
                 },
                 {
                     "key": "575612bf9a8f8",
-                    "name": "section-col-12-card",
+                    "name": "card",
                     "label": "Paragraph with Image",
                     "display": "block",
                     "sub_fields": [
@@ -29514,7 +29514,7 @@
                 },
                 {
                     "key": "575a4d871f595",
-                    "name": "section-col-4-col-8-n2",
+                    "name": "small-column-big-column",
                     "label": "Small Element and Big Element",
                     "display": "block",
                     "sub_fields": [
@@ -34712,7 +34712,7 @@
                 },
                 {
                     "key": "575a4e0b1f59a",
-                    "name": "section-col-8-col-4-n2",
+                    "name": "big-column-small-column",
                     "label": "Big Element and Small Element",
                     "display": "block",
                     "sub_fields": [
@@ -39910,7 +39910,7 @@
                 },
                 {
                     "key": "575a4ea649724",
-                    "name": "section-col-12-image-grid",
+                    "name": "image-grid",
                     "label": "Image Grid",
                     "display": "block",
                     "sub_fields": [
@@ -41071,7 +41071,7 @@
                 },
                 {
                     "key": "575a4eec49729",
-                    "name": "section-col-12-slider",
+                    "name": "slider",
                     "label": "Slider",
                     "display": "block",
                     "sub_fields": [
@@ -41741,7 +41741,7 @@
                 },
                 {
                     "key": "576c84951046d",
-                    "name": "section-related-items",
+                    "name": "related-items",
                     "label": "Related Website Items",
                     "display": "block",
                     "sub_fields": [
@@ -44517,7 +44517,7 @@
                 },
                 {
                     "key": "577b131adde2e",
-                    "name": "section-team",
+                    "name": "team",
                     "label": "Our Leadership",
                     "display": "block",
                     "sub_fields": [
@@ -47292,7 +47292,7 @@
                 },
                 {
                     "key": "577608f7af169",
-                    "name": "section-gear",
+                    "name": "gear",
                     "label": "The Gear",
                     "display": "block",
                     "sub_fields": [
@@ -47695,7 +47695,7 @@
                 },
                 {
                     "key": "577611c270616",
-                    "name": "section-locator",
+                    "name": "locator",
                     "label": "The Location",
                     "display": "block",
                     "sub_fields": [
@@ -48097,7 +48097,7 @@
                 },
                 {
                     "key": "579702f5ecd65",
-                    "name": "section-case-study",
+                    "name": "case-study",
                     "label": "Case Studies",
                     "display": "block",
                     "sub_fields": [
@@ -49106,7 +49106,7 @@
                 },
                 {
                     "key": "5798394b74b5e",
-                    "name": "section-our-people",
+                    "name": "our-people",
                     "label": "Our People",
                     "display": "block",
                     "sub_fields": [

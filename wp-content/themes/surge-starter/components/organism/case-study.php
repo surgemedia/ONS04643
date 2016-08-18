@@ -1,4 +1,4 @@
-<section <?php echo $vars['section_id'].' '.$vars['section_classes'].' '.$vars['section_style'] ?>>
+
   <?php
     get_component([ 'template' => 'molecule/card',
                     'remove_tags' => $vars['remove_elements'],
@@ -52,4 +52,3 @@
       wp_reset_postdata();
           ?>
     <!-- </div> -->
-</section>
